@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="txtDetailCol14.OutputFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtDetailCol13.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtDetailCol12.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtDetailCol11.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtDetailCol10.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtDetailCol9.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtDetailCol8.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtDetailCol7.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtDetailCol6.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtDetailCol5.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtDetailCol4.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtDetailCol3.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtDetailCol2.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtDetailCol1.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtDetailCol0.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtKamokuName.OutputFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtDaikubunName.OutputFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBox1.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox3.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox4.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox5.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox6.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox7.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox2.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox8.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox9.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox10.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox11.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox12.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox13.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox14.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox15.OutputFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtFooterCol0.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtFooterCol1.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtFooterCol2.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtFooterCol3.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtFooterCol4.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtFooterCol5.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtFooterCol6.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtFooterCol7.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtFooterCol8.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtFooterCol9.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtFooterCol10.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtFooterCol11.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtFooterCol12.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtFooterCol13.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtFooterCol14.OutputFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtDaikubunNameFooter.OutputFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBox16.OutputFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSonota0.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSonota0Kokko.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSonota1.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSonota1Kokko.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSonota2.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSonota2Kokko.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSonota3.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSonota3Kokko.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSonota4.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSonota4Kokko.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSonota5.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSonota5Kokko.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSonota6.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSonota6Kokko.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox31.OutputFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBox32.OutputFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtKihonSonota0.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtKihonSonota0Kokko.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtKihonSonota1.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtKihonSonota1Kokko.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtKihonSonota2.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtKihonSonota2Kokko.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtKihonSonota3.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtKihonSonota3Kokko.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtKihonSonota4.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtKihonSonota4Kokko.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtKihonSonota5.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtKihonSonota5Kokko.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtKihonSonota6.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtKihonSonota6Kokko.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox47.OutputFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBox48.OutputFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBox49.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox50.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox51.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox52.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox53.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox54.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox55.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox56.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox57.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox58.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox59.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox60.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox61.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox62.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox63.OutputFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBox64.OutputFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSashihiki0.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSashihiki0Kokko.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSashihiki1.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSashihiki1Kokko.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSashihiki2.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSashihiki2Kokko.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSashihiki3.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSashihiki3Kokko.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSashihiki4.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSashihiki4Kokko.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSashihiki5.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSashihiki5Kokko.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSashihiki6.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="txtSashihiki6Kokko.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="textBox79.OutputFormat" xml:space="preserve">
+    <value />
+  </data>
+  <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

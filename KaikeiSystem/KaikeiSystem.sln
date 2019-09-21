@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaikeiSystemBody", "KaikeiSystemBody\KaikeiSystemBody.csproj", "{7CBBAE38-DC16-4395-A75F-1185D9A20359}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaikeiSystem", "KaikeiSystem\KaikeiSystem.csproj", "{5C39456E-EA87-4717-B2D4-19DA035856F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicenseClient", "..\LicenseClient\LicenseClient\LicenseClient.csproj", "{A944ECD3-A1DD-4F6D-A8B9-CCCBE30697E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseUpdater", "..\DatabaseUpdater\DatabaseUpdater.csproj", "{8F5F49F9-5EA1-4F61-9B1B-93CE77A19C27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CBBAE38-DC16-4395-A75F-1185D9A20359}.Debug|x86.ActiveCfg = Debug|x86
+		{7CBBAE38-DC16-4395-A75F-1185D9A20359}.Debug|x86.Build.0 = Debug|x86
+		{7CBBAE38-DC16-4395-A75F-1185D9A20359}.Release|x86.ActiveCfg = Release|x86
+		{7CBBAE38-DC16-4395-A75F-1185D9A20359}.Release|x86.Build.0 = Release|x86
+		{5C39456E-EA87-4717-B2D4-19DA035856F7}.Debug|x86.ActiveCfg = Debug|x86
+		{5C39456E-EA87-4717-B2D4-19DA035856F7}.Debug|x86.Build.0 = Debug|x86
+		{5C39456E-EA87-4717-B2D4-19DA035856F7}.Release|x86.ActiveCfg = Release|x86
+		{5C39456E-EA87-4717-B2D4-19DA035856F7}.Release|x86.Build.0 = Release|x86
+		{A944ECD3-A1DD-4F6D-A8B9-CCCBE30697E0}.Debug|x86.ActiveCfg = Debug|x86
+		{A944ECD3-A1DD-4F6D-A8B9-CCCBE30697E0}.Debug|x86.Build.0 = Debug|x86
+		{A944ECD3-A1DD-4F6D-A8B9-CCCBE30697E0}.Release|x86.ActiveCfg = Release|x86
+		{A944ECD3-A1DD-4F6D-A8B9-CCCBE30697E0}.Release|x86.Build.0 = Release|x86
+		{8F5F49F9-5EA1-4F61-9B1B-93CE77A19C27}.Debug|x86.ActiveCfg = Debug|x86
+		{8F5F49F9-5EA1-4F61-9B1B-93CE77A19C27}.Debug|x86.Build.0 = Debug|x86
+		{8F5F49F9-5EA1-4F61-9B1B-93CE77A19C27}.Release|x86.ActiveCfg = Release|x86
+		{8F5F49F9-5EA1-4F61-9B1B-93CE77A19C27}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

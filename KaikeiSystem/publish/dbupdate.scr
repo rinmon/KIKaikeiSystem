@@ -1,0 +1,284 @@
+﻿*version:7
+//注記
+create table tyuuki(
+	id integer not null primary key autoincrement,
+	nenndo integer,
+	kaikei_kubun_id integer,
+	tyuuki1 text,
+	tyuuki2 text,
+	tyuuki3 text,
+	tyuuki4 text,
+	tyuuki5 text,
+	tyuuki7 text,
+	tyuuki12 text,
+	tyuuki13 text,
+	tyuuki14 text,
+	tyuuki15 text
+);
+create index tyuuki_index on tyuuki (nenndo, kaikei_kubun_id);
+
+//注記8
+create table tyuuki8(
+	id integer not null primary key autoincrement,
+	tyuuki_id integer,
+	tanpo_kubun_id integer,
+	kamoku_kubun_id integer,
+	amount integer
+);
+create index tyuuki8_index on tyuuki8 (tyuuki_id);
+
+//注記10
+create table tyuuki10(
+	id integer not null primary key autoincrement,
+	tyuuki_id integer,
+	kamoku_kubun_id integer,
+	saiken_gaku integer,
+	tyousyuuhunoukin_zandaka integer,
+	toukimatsu_zandaka integer
+);
+create index tyuuki10_index on tyuuki10 (tyuuki_id);
+
+//注記11
+create table tyuuki11(
+	id integer not null primary key autoincrement,
+	tyuuki_id integer,
+	caption text,
+	tyoubo_kagaku integer,
+	jika integer,
+	hyouka_soneki integer
+);
+create index tyuuki11_index on tyuuki11 (tyuuki_id);
+
+//担保区分
+create table mt_tanpo_kubun(
+	id integer not null primary key autoincrement,
+	caption text
+);
+insert into mt_tanpo_kubun (id, caption) values (1, "担保に供されている資産の種類及び金額");
+insert into mt_tanpo_kubun (id, caption) values (2, "担保している債務の種類及び金額");
+
+*version:6
+//固定資産
+drop table mt_kotei_shisan;
+create table mt_kotei_shisan(
+	id integer not null primary key autoincrement,
+	kamoku_kubun_id integer,
+	shisan_meisyou text,
+	syoukyaku_kubun integer,
+	kaikei_kubun integer,
+	suuryou integer,
+	syutoku_nenngappi integer,
+	gensyoubi integer,
+	syutoku_kakaku integer,
+	assyuku_kityougaku integer,
+	kisyu_syoukyakugaku_ruikei  integer,
+	syoukyaku_houhou integer,
+	taiyou_nennsuu integer,
+	syoukyaku_ritsu real,
+	syoukyaku_kahi integer,
+	keijou_houhou integer,
+	zouka_jiyuu integer,
+	gensyou_jiyuu integer,
+	syoukyaku_shisan_zei integer,
+	kyouyou_kaishibi integer,
+	kyouyou_syuuryoubi integer,
+	zanzon_wariai real,
+	zanzon_kakaku integer,
+	zanzon_gendo_wariai real,
+	zanzon_gendo_gaku integer,
+	hutsuu_syoukyaku_hi integer,
+	zouka_syoukyaku_gaku integer,
+	warimashi_syoukyaku_hi integer,
+	tokubetsu_syoukyaku_hi integer,
+	bikou text,
+	kisyu_tyoubo_kakaku integer,
+	syoukyaku_kiso integer,
+	hojokin_gaku integer
+);
+
+*version:5
+// mt_kanjou_kamokuにkaikei_kubun_hierarchyを追加
+// 通常=-1, 事業区分間取引=2, 拠点区分間取引=3, サービス区分間取引=4
+alter table mt_kanjou_kamoku add column kaikei_kubun_hierarchy integer;
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = -1;
+// 事業区分間繰入金収益
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 2 where id = 211;
+// 拠点区分間繰入金収益
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 3 where id = 212;
+// サービス区分間繰入金収益
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 4 where id = 397;
+// 事業区分間固定資産移管収益
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 2 where id = 213;
+// 拠点区分間固定資産移管収益
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 3 where id = 214;
+// サービス区分間固定資産移管収益
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 4 where id = 398;
+// 事業区分間繰入費用
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 2 where id = 225;
+// 拠点区分間繰入費用
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 3 where id = 226;
+// サービス区分間繰入費用
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 4 where id = 399;
+// 事業区分間固定資産移管費用
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 2 where id = 227;
+// 拠点区分間固定資産移管費用
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 3 where id = 228;
+// サービス区分間固定資産移管費用
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 4 where id = 400;
+// １年以内回収予定事業区分間長期貸付金
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 2 where id = 261;
+// １年以内回収予定拠点区分間長期貸付金
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 3 where id = 262;
+// 事業区分間貸付金
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 2 where id = 264;
+// 拠点区分間貸付金
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 3 where id = 265;
+// 事業区分間長期貸付金
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 2 where id = 286;
+// 拠点区分間長期貸付金
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 3 where id = 287;
+// １年以内返済予定事業区分間借入金
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 2 where id = 306;
+// １年以内返済予定拠点区分間借入金
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 3 where id = 307;
+// 事業区分間借入金
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 2 where id = 318;
+// 拠点区分間借入金
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 3 where id = 319;
+// 事業区分間長期借入金
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 2 where id = 327;
+// 拠点区分間長期借入金
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 3 where id = 328;
+// 事業区分間長期借入金収入
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 2 where id = 373;
+// 拠点区分間長期借入金収入
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 3 where id = 374;
+// 事業区分間長期貸付金回収収入
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 2 where id = 375;
+// 拠点区分間長期貸付金回収収入
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 3 where id = 376;
+// 事業区分間長期借入金返済支出
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 2 where id = 387;
+// 拠点区分間長期借入金返済支出
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 3 where id = 388;
+// 事業区分間長期貸付金支出
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 2 where id = 389;
+// 拠点区分間長期貸付金支出
+update mt_kanjou_kamoku set kaikei_kubun_hierarchy = 3 where id = 390;
+
+
+*version:4
+
+// mt_kamoku_kubunにeditable, deletedを追加
+alter table mt_kamoku_kubun add column editable integer;
+alter table mt_kamoku_kubun add column deleted integer;
+update mt_kamoku_kubun set editable = 0 where id <= 745;
+update mt_kamoku_kubun set editable = 1 where id > 745;
+update mt_kamoku_kubun set deleted = 0;
+
+// 前期末支払資金残高を追加 (チケット#840)
+insert into mt_kamoku_kubun 
+	(id, name, has_child, parent_id, hierarchy, display_order, kanjou_kamoku_id, editable, deleted)
+	values
+	(10000, "前期末支払資金残高", 0, -1, 0, 27001, 10000, 0, 0);
+insert into mt_kanjou_kamoku
+	(id, kamoku, kamoku_yomi, has_child, parent_id, shikin_kamoku_kubun_id,
+	jigyou_kamoku_kubun_id, taisyaku_kamoku_kubun_id, taisyaku_kubun_id,
+	usable, editable, kamoku_code, denpyou_print_target, hierarchy)
+	values
+	(10000, "前期末支払資金残高", "ぜんきまつしはらいしきんざんだか", 0, -1, -1,
+	-1, 10000, 1,
+	1, 0, "27001", 1, 1);
+
+// mt_kanjou_kamokuに会計区分の指定を追加 (チケット#825)
+alter table mt_kanjou_kamoku add column kaikei_kubun_id integer;
+update mt_kanjou_kamoku set kaikei_kubun_id = -1;
+
+
+*version:3
+
+// 資産の流動負債を削除
+update mt_kamoku_kubun set parent_id=607 where parent_id=604;
+delete from mt_kamoku_kubun where id=604;
+
+// サービス区分間固定資産移管費用の事業活動区分を『特別増減による収益』→『特別増減による費用』に修正
+update mt_kamoku_kubun set parent_id=740 where id=751;
+
+// その他の事業収益の小区分の名称変更
+update mt_kanjou_kamoku set kamoku="補助金事業収益", kamoku_yomi="ほじょきんじぎょうしゅうえき" where id=65;
+update mt_kanjou_kamoku set kamoku="受託事業収益", kamoku_yomi="じゅたくじぎょうしゅうえき" where id=66;
+update mt_kanjou_kamoku set kamoku="その他の事業収益", kamoku_yomi="そのたのじぎょうしゅうえき" where id=67;
+update mt_kamoku_kubun set name="補助金事業収益" where id=142;
+update mt_kamoku_kubun set name="受託事業収益" where id=145;
+update mt_kamoku_kubun set name="その他の事業収益" where id=147;
+
+
+*version:2
+
+drop table mt_ikkatsu_syori;
+create table mt_ikkatsu_syori (
+	id integer not null primary key autoincrement,
+	kaikei_kubun integer,
+	torihiki_kubun integer,
+	karikata_kamoku_id integer,
+	karikata_hojo_id integer,
+	karikata_hojo_seiri integer,
+	karikata_kingaku integer,
+	kashikata_kamoku_id integer,
+	kashikata_hojo_id integer,
+	kashikata_hojo_seiri integer,
+	kashikata_kingaku integer,
+	tekiyou_id integer,
+	comment text,
+	touroku integer,
+	karikata_kamoku_code text,
+	kashikata_kamoku_code text,
+	tsuika_kubun text
+);
+
+
+drop table taisyaku_taisyouhyou_tyuuki5;
+create table taisyaku_taisyouhyou_tyuuki5 (
+	id integer not null primary key autoincrement,
+	tyuuki_id integer,
+	kaikei_kubun integer,
+	tanpo_kubun integer,
+	kamoku_id integer,
+	amount integer
+);
+create index taisyaku_taisyouhyou_tyuuki5_index on taisyaku_taisyouhyou_tyuuki5 (tyuuki_id);
+
+drop table taisyaku_taisyouhyou_tyuuki4;
+create table taisyaku_taisyouhyou_tyuuki4 (
+	id integer not null primary key autoincrement,
+	tyuuki_id integer,
+	kaikei_kubun integer,
+	naiyou text
+);
+create index taisyaku_taisyouhyou_tyuuki4_index on taisyaku_taisyouhyou_tyuuki4 (tyuuki_id);
+
+drop table taisyaku_taisyouhyou_tyuuki3;
+create table taisyaku_taisyouhyou_tyuuki3 (
+	id integer not null primary key autoincrement,
+	tyuuki_id integer,
+	kaikei_kubun integer,
+	kamoku_id integer,
+	tekiyou text,
+	amount integer
+);
+create index taisyaku_taisyouhyou_tyuuki3_index on taisyaku_taisyouhyou_tyuuki3 (tyuuki_id);
+
+drop table taisyaku_taisyouhyou_kyakutyuu;
+create table taisyaku_taisyouhyou_kyakutyuu (
+	id integer not null primary key autoincrement,
+	tyuuki_id integer,
+	kaikei_kubun integer,
+	genka_baikyaku_ruikei integer,
+	tyousyuu_hunou_kin integer
+);
+create index taisyaku_taisyouhyou_kyakutyuu_index on taisyaku_taisyouhyou_kyakutyuu (tyuuki_id);
+
+
+*version:1
+// noting to do
+

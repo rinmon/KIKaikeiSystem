@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LicenseClient.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="server" Type="System.String" Scope="User">
+      <Value Profile="(Default)">keiaisystem.com</Value>
+    </Setting>
+    <Setting Name="service" Type="System.String" Scope="User">
+      <Value Profile="(Default)">kaikei</Value>
+    </Setting>
+    <Setting Name="accountId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">testpassword</Value>
+    </Setting>
+    <Setting Name="binaryName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">KaikeiSystem.exe</Value>
+    </Setting>
+    <Setting Name="licenseFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">license.dat</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

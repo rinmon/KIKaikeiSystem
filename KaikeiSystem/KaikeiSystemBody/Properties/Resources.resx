@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="StatusKarikataKamokuCode" xml:space="preserve">
+    <value>借方勘定科目コードを入力</value>
+  </data>
+  <data name="MsgKihyoubiOutOfRange" xml:space="preserve">
+    <value>登録された起票日は現在の年度の範囲にありません。</value>
+  </data>
+  <data name="MsgUseKurikoshiZumiData" xml:space="preserve">
+    <value>%s年度の繰越済みデータを使用しました。</value>
+  </data>
+  <data name="MsgNoKashikataKamokuCode" xml:space="preserve">
+    <value>貸方科目が指定されていません。科目を指定してください。</value>
+  </data>
+  <data name="MsgNoKarikataKamokuCode" xml:space="preserve">
+    <value>借方科目が指定されていません。科目を指定してください</value>
+  </data>
+  <data name="StatusMoveToNewRow" xml:space="preserve">
+    <value>新規レコードに移動します</value>
+  </data>
+  <data name="MsgFailedToCopyUpperRow" xml:space="preserve">
+    <value>先頭値のため値を取得できません。</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="denpyou_grid_header" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\denpyou_grid_header.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionError" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="StatusGengou" xml:space="preserve">
+    <value>元号を入力</value>
+  </data>
+  <data name="StatusTorihikiKubun" xml:space="preserve">
+    <value>取引区分を入力</value>
+  </data>
+  <data name="MsgHojoSeiriNotFound" xml:space="preserve">
+    <value>入力された番号の補助科目は登録されていません。</value>
+  </data>
+  <data name="StatusSelectKeiriKubun" xml:space="preserve">
+    <value>経理区分を選択</value>
+  </data>
+  <data name="StatusKashikataKamokuCode" xml:space="preserve">
+    <value>貸方勘定科目コードを入力</value>
+  </data>
+  <data name="StatusDay" xml:space="preserve">
+    <value>日を入力</value>
+  </data>
+  <data name="MsgHurikaeTaisyouKamoku" xml:space="preserve">
+    <value>この科目は損益伝票で振り替える必要があります。</value>
+  </data>
+  <data name="MsgTorihikiKubunNotSelected" xml:space="preserve">
+    <value>取引区分が選択されていません。</value>
+  </data>
+  <data name="StatusDenpyouSeiriBangou" xml:space="preserve">
+    <value>伝票整理番号</value>
+  </data>
+  <data name="StatusShowMototyou" xml:space="preserve">
+    <value>選択された年月・科目で元帳表示</value>
+  </data>
+  <data name="MsgIkkatsuTourokuConfirm" xml:space="preserve">
+    <value>%s件のデータを会計伝票に一括登録します。
+変更は元に戻せません。一括登録処理を実行しますか？</value>
+  </data>
+  <data name="MsgDate2WarekiConvError" xml:space="preserve">
+    <value>西暦から和暦への変換に失敗しました。 : %s</value>
+  </data>
+  <data name="StatusDataTypeSelection" xml:space="preserve">
+    <value>表示するデータ区分</value>
+  </data>
+  <data name="StatusMonth" xml:space="preserve">
+    <value>月を入力</value>
+  </data>
+  <data name="MsgKessanSyuuryou" xml:space="preserve">
+    <value>このレコードは決算済みのため編集できません。</value>
+  </data>
+  <data name="CaptionWarning" xml:space="preserve">
+    <value>注意</value>
+  </data>
+  <data name="MsgInvalidHojoKamoku" xml:space="preserve">
+    <value>補助科目の指定が正しくありません。</value>
+  </data>
+  <data name="StatusHojoSeiri" xml:space="preserve">
+    <value>補助科目コードを入力</value>
+  </data>
+  <data name="StatusSelectHojoKamoku" xml:space="preserve">
+    <value>対象補助科目を選択</value>
+  </data>
+  <data name="StatusDenpyouKakunin" xml:space="preserve">
+    <value>確認用チェックボックス</value>
+  </data>
+  <data name="draw_pencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\draw_pencil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MsgInvalidKarikataKamokuCode" xml:space="preserve">
+    <value>借方科目コードの指定が正しくありません。科目コードは５桁で入力してください。</value>
+  </data>
+  <data name="MsgKaikeiKubunNotSelected" xml:space="preserve">
+    <value>会計区分が選択されていません。</value>
+  </data>
+  <data name="MsgInvalidKashikataKamokuCode" xml:space="preserve">
+    <value>貸方科目コードの指定が正しくありません。科目コードは５桁で入力してください</value>
+  </data>
+  <data name="StatusComment" xml:space="preserve">
+    <value>コメントを入力</value>
+  </data>
+  <data name="MsgDBOpenError" xml:space="preserve">
+    <value>データベースのオープンに失敗しました。</value>
+  </data>
+  <data name="StatusShowInvalidRow" xml:space="preserve">
+    <value>不正な入力の伝票を確認します</value>
+  </data>
+  <data name="MsgInvalidKamoku" xml:space="preserve">
+    <value>科目の指定が正しくありません。</value>
+  </data>
+  <data name="StatusShowTekiyouPopup" xml:space="preserve">
+    <value>摘要を表示します</value>
+  </data>
+  <data name="StatusSubfunction" xml:space="preserve">
+    <value>補助機能を使います</value>
+  </data>
+  <data name="ConstantTokuhitsujikouNasi" xml:space="preserve">
+    <value>特記事項なし</value>
+  </data>
+  <data name="StatusKeiriKubun" xml:space="preserve">
+    <value>経理区分を入力</value>
+  </data>
+  <data name="MsgFailedToRemoveRow" xml:space="preserve">
+    <value>このレコードを削除できません。</value>
+  </data>
+  <data name="StatusReturnToMenu" xml:space="preserve">
+    <value>メニューに戻ります</value>
+  </data>
+  <data name="MsgInvalidDate" xml:space="preserve">
+    <value>日付の入力が不正です。</value>
+  </data>
+  <data name="StatusYear" xml:space="preserve">
+    <value>年を入力</value>
+  </data>
+  <data name="StatusSelectKamoku" xml:space="preserve">
+    <value>対象科目を選択</value>
+  </data>
+  <data name="CaptionConfirm" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="MsgLicenseError" xml:space="preserve">
+    <value>ライセンス認証された有効期限を越えてシステムを使用することはできません。
+システムを強制終了します。</value>
+  </data>
+  <data name="MsgShiyouKubun" xml:space="preserve">
+    <value>この科目は勘定科目マスタで使用しない設定になっています。
+別の科目コードを入力するか勘定科目マスタの設定を見直してください。</value>
+  </data>
+  <data name="MsgInsertSuccess" xml:space="preserve">
+    <value>登録が終了しました</value>
+  </data>
+  <data name="arrow_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StatusKaikeiKubun" xml:space="preserve">
+    <value>会計区分を入力</value>
+  </data>
+  <data name="MsgSucceeded" xml:space="preserve">
+    <value>処理が終了しました。</value>
+  </data>
+  <data name="MsgNoKashikataHojoSeiri" xml:space="preserve">
+    <value>この貸方科目には補助科目が登録されています。
+貸方補助科目を指定してください。</value>
+  </data>
+  <data name="MsgSearchSuccess" xml:space="preserve">
+    <value>検索が終了しました</value>
+  </data>
+  <data name="MsgNoKarikataHojoSeiri" xml:space="preserve">
+    <value>この借方科目には補助科目が登録されています。
+借方補助科目を指定してください。</value>
+  </data>
+  <data name="MsgConfirmToDeleteRow" xml:space="preserve">
+    <value>削除したデータは元に戻すことができません。
+本当に削除してもよろしいですか？</value>
+  </data>
+  <data name="StatusTekiyou" xml:space="preserve">
+    <value>摘要コードを入力</value>
+  </data>
+  <data name="MsgInvalidInput" xml:space="preserve">
+    <value>不正な入力です。 : %s</value>
+  </data>
+  <data name="MsgIkkatsuTourokuNoDataSelected" xml:space="preserve">
+    <value>一括登録の対象となるデータが０件です。処理を中断します。</value>
+  </data>
+  <data name="MsgInvaidHojoSeiri" xml:space="preserve">
+    <value>補助科目の指定が正しくありません。登録されている会計区分と一致しません。</value>
+  </data>
+  <data name="StatusShowKamokuPopup" xml:space="preserve">
+    <value>勘定科目を表示します</value>
+  </data>
+  <data name="MsgConfirmUncheckAll" xml:space="preserve">
+    <value>すべての伝票のチェックを解除します。解除したものは元に戻せません。実行しますか？</value>
+  </data>
+  <data name="MsgKurikoshiZumiDataNotFount" xml:space="preserve">
+    <value>指定された年度のデータは存在しません。
+処理を中断します。</value>
+  </data>
+  <data name="StatusShowDenpyouInfo" xml:space="preserve">
+    <value>記載されている会計伝票を開く</value>
+  </data>
+  <data name="StatusKingaku" xml:space="preserve">
+    <value>金額を入力</value>
+  </data>
+  <data name="StatusShowHojoMototyou" xml:space="preserve">
+    <value>選択された年月・科目の補助元帳表示</value>
+  </data>
+  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MsgCompleteCopyYosan" xml:space="preserve">
+    <value>処理が終了しました。必要に応じて変更してください。</value>
+  </data>
+  <data name="MsgConfirmCopyYosan" xml:space="preserve">
+    <value>現在指定されている前年度の予算データを今年度の通常予算としてデータをコピーします。
+実行してもよろしいですか？</value>
+  </data>
+  <data name="MsgConfirmDeleteYosan" xml:space="preserve">
+    <value>指定された情報で予算データを削除します。削除されたデータは元に戻すことができません。
+実行してもよろしいですか？</value>
+  </data>
+  <data name="MsgInvalidHoseiKaisuu" xml:space="preserve">
+    <value>補正予算の登録の時には何回目の補正予算か入力してください。</value>
+  </data>
+  <data name="MsgInvalidYear" xml:space="preserve">
+    <value>年度の入力が不正です。</value>
+  </data>
+  <data name="MsgInvalidYosanKubun" xml:space="preserve">
+    <value>予算区分の値が不正です。</value>
+  </data>
+  <data name="MsgYosanDaikubunAlreadyExist" xml:space="preserve">
+    <value>指定した年度に登録済みのデータがありました。大区分データのコピーを省略します。</value>
+  </data>
+  <data name="MsgYosanHojoKamokuAlreadyExist" xml:space="preserve">
+    <value>指定した年度に登録済みのデータがありました。補助科目データのコピーを省略します。</value>
+  </data>
+  <data name="MsgYosanKamokuAlreadyExist" xml:space="preserve">
+    <value>指定した年度に登録済みのデータがありました。科目データのコピーを省略します。</value>
+  </data>
+  <data name="MsgYosanYobihiAlreadyExist" xml:space="preserve">
+    <value>指定した年度に登録済みのデータがありました。予備費データのコピーを省略します。</value>
+  </data>
+  <data name="MsgYosanDataIsNotExist" xml:space="preserve">
+    <value>指定された条件の予算は入力がありません。
+新規登録を行ってください。</value>
+  </data>
+  <data name="CaptionNewRowId" xml:space="preserve">
+    <value>(新規)</value>
+  </data>
+  <data name="MsgInputDataIncomplete" xml:space="preserve">
+    <value>入力データが不十分です。</value>
+  </data>
+  <data name="MsgConfirmSyoukyakuMeisaiDenpyouHakkou" xml:space="preserve">
+    <value>伝票を削除した場合、償却明細の「伝票発行」チェックを解除してください。</value>
+  </data>
+  <data name="create" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\create.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MsgUsedTekiyouCanntRemove" xml:space="preserve">
+    <value>この摘要は会計伝票で使用されているので削除できません。</value>
+  </data>
+  <data name="MsgInvalidActivityType" xml:space="preserve">
+    <value>指定された番号の処理はありません。もう一度入力しなおしてください。</value>
+  </data>
+  <data name="CaptionHoseiKaisuu" xml:space="preserve">
+    <value>{0}年度は{1}回数の補正予算が含まれています。</value>
+  </data>
+  <data name="CaptionNoHoseiYosan" xml:space="preserve">
+    <value>{0}年度は補正予算をくんでいません。</value>
+  </data>
+  <data name="MsgInvalidHoseiKaisuuInput" xml:space="preserve">
+    <value>補正回数の入力が不正です。</value>
+  </data>
+  <data name="MsgPrintTargetIsNotSelected" xml:space="preserve">
+    <value>印刷対象が選択されていません。</value>
+  </data>
+  <data name="CaptionAll" xml:space="preserve">
+    <value>すべて</value>
+  </data>
+  <data name="MsgInvalidKaikeiKubun" xml:space="preserve">
+    <value>会計区分の値が不正です。</value>
+  </data>
+  <data name="down_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\down_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MsgDuplicatedKamokuCode" xml:space="preserve">
+    <value>科目コードが重複しています。重複しないように修正してください。</value>
+  </data>
+  <data name="MsgDeleteHojoKamoku" xml:space="preserve">
+    <value>小区分／補助科目を先に全て削除してください</value>
+  </data>
+  <data name="CaptionMenuFormInfo" xml:space="preserve">
+    <value>{0}
+{1}
+ver.{2} (db ver.{3})</value>
+  </data>
+  <data name="MsgNotExist" xml:space="preserve">
+    <value>データが存在しません。</value>
+  </data>
+  <data name="StatusSelectKaikeiKubun" xml:space="preserve">
+    <value>会計区分を選択</value>
+  </data>
+  <data name="MsgInvalidDenpyouBangou" xml:space="preserve">
+    <value>伝票番号の入力が不正です</value>
+  </data>
+  <data name="CaptionJigyouShisyutsuKei" xml:space="preserve">
+    <value>事業活動支出計</value>
+  </data>
+  <data name="CaptionJigyouSyuunyuuKei" xml:space="preserve">
+    <value>事業活動収入計</value>
+  </data>
+  <data name="CaptionJigyouSyuushiSagaku" xml:space="preserve">
+    <value>事業活動資金収支差額</value>
+  </data>
+  <data name="CaptionShisetsuShisyutsuKei" xml:space="preserve">
+    <value>施設設備等支出計</value>
+  </data>
+  <data name="CaptionShisetsuSyuunyuuKei" xml:space="preserve">
+    <value>施設設備等収入計</value>
+  </data>
+  <data name="CaptionShisetsuSyuushiSagaku" xml:space="preserve">
+    <value>施設設備等資金収支差額</value>
+  </data>
+  <data name="CaptionSonotaShisyutsuKei" xml:space="preserve">
+    <value>その他の活動支出計</value>
+  </data>
+  <data name="CaptionSonotaSyuunyuuKei" xml:space="preserve">
+    <value>その他の活動収入計</value>
+  </data>
+  <data name="CaptionSonotaSyuushiSagaku" xml:space="preserve">
+    <value>その他の活動資金収支差額</value>
+  </data>
+  <data name="CaptionYuubinMark" xml:space="preserve">
+    <value>〒</value>
+  </data>
+  <data name="CaptionJigyouSyuushi" xml:space="preserve">
+    <value>事業活動による収支</value>
+  </data>
+  <data name="CaptionShisetsuSyuushi" xml:space="preserve">
+    <value>施設設備等による収支</value>
+  </data>
+  <data name="CaptionSonotaSyuushi" xml:space="preserve">
+    <value>その他の活動による収支</value>
+  </data>
+  <data name="CaptionToukimatsuShiharaiShikinZandaka" xml:space="preserve">
+    <value>当期末支払資金残高</value>
+  </data>
+  <data name="CaptionToukiShikinSyuushiSagakuGoukei" xml:space="preserve">
+    <value>当期資金収支差額合計</value>
+  </data>
+  <data name="CaptionYobihiShisyutsu" xml:space="preserve">
+    <value>予備費支出</value>
+  </data>
+  <data name="CaptionZenkimatsuShiharaiShikinZandaka" xml:space="preserve">
+    <value>前期末支払資金残高</value>
+  </data>
+  <data name="CaptionKeijouZougenSagaku" xml:space="preserve">
+    <value>経常増減差額</value>
+  </data>
+  <data name="CaptionServiceKatsudouGaiHiyouKei" xml:space="preserve">
+    <value>サービス活動外費用計</value>
+  </data>
+  <data name="CaptionServiceKatsudouGaiSyuuekiKei" xml:space="preserve">
+    <value>サービス活動外収益計</value>
+  </data>
+  <data name="CaptionServiceKatsudouGaiZougenSagaku" xml:space="preserve">
+    <value>サービス活動外増減差額</value>
+  </data>
+  <data name="CaptionServiceKatsudouHiyouKei" xml:space="preserve">
+    <value>サービス活動費用計</value>
+  </data>
+  <data name="CaptionServiceKatsudouSyuuekiKei" xml:space="preserve">
+    <value>サービス活動収益計</value>
+  </data>
+  <data name="CaptionServiceKatsudouZougenSagaku" xml:space="preserve">
+    <value>サービス活動増減差額</value>
+  </data>
+  <data name="CaptionTokubetsuHiyouKei" xml:space="preserve">
+    <value>特別費用計</value>
+  </data>
+  <data name="CaptionTokubetsuSyuuekiKei" xml:space="preserve">
+    <value>特別収益計</value>
+  </data>
+  <data name="CaptionTokubetsuZougenSagaku" xml:space="preserve">
+    <value>特別増減差額</value>
+  </data>
+  <data name="MsgConfirmZenkimatsuShiharaiShikinZandakaChange" xml:space="preserve">
+    <value>前期末支払資金残高を変更します。元に戻すことができません。よろしいですか？</value>
+  </data>
+  <data name="MsgCheckParentKubunYosan" xml:space="preserve">
+    <value>親区分に予算が設定されています。親区分の予算を引き継ぎます。</value>
+  </data>
+  <data name="CaptionKihonZaisanYuukei" xml:space="preserve">
+    <value>基本財産（有形固定資産）</value>
+  </data>
+  <data name="CaptionSonotaKoteishisanMukei" xml:space="preserve">
+    <value>その他の固定資産（無形固定資産）</value>
+  </data>
+  <data name="CaptionSonotaKoteishisanYuukei" xml:space="preserve">
+    <value>その他の固定資産（有形固定資産）</value>
+  </data>
+  <data name="ConstantGaitounashi" xml:space="preserve">
+    <value>該当なし</value>
+  </data>
+  <data name="CaptionExcelExport" xml:space="preserve">
+    <value>Excelに出力</value>
+  </data>
+  <data name="MsgUsedKamokuCanNotDelete" xml:space="preserve">
+    <value>この科目は会計伝票で使用されているため削除できません</value>
+  </data>
+  <data name="CaptionHierarchyChukubun" xml:space="preserve">
+    <value>中区分</value>
+  </data>
+  <data name="CaptionHierarchyDaikubun" xml:space="preserve">
+    <value>大区分</value>
+  </data>
+  <data name="CaptionHierarchyHojokamoku" xml:space="preserve">
+    <value>補助科目</value>
+  </data>
+  <data name="CaptionHierarchySyoukubun" xml:space="preserve">
+    <value>小区分</value>
+  </data>
+  <data name="CaptionHierarchy" xml:space="preserve">
+    <value />
+  </data>
+</root>

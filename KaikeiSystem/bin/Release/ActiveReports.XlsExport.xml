@@ -1,0 +1,1172 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<doc>
+    <assembly>
+        <name>ActiveReports.XlsExport</name>
+    </assembly>
+    <members>
+        <member name="N:DataDynamics.ActiveReports.Export.Xls">
+            <summary>DataDynamics.ActiveReports.Export.Xls名前空間には、Excelエクスポート機能が含まれています。</summary>
+            <remarks>    この型の任意のpublic staticメンバ（Visual     Basicの場合Shared）はマルチスレッドセーフです。ただし、インスタンスメンバはスレッドセーフが保証されていません。たとえば、別のスレッドでExportメソッドが実行されているときにあるスレッドのプロパティ値を変更すると、予期しない結果が生じる場合があります。     Excelへのエクスポート時のレポートの最適化：          Excelは基本的に行と列のテーブルであり、ActiveReportsは自由形式のレイアウト出力であるため、Excelへエクスポートするには、レポートの最適化が必要となる場合があります。          Excelへのエクスポート時に２つのコントロールを同じ列に入れたい場合は、２つのコントロールに同一のLeftプロパティ値を設定する必要があります。また、２つのコントロールに同じフォントを設定することも、レイアウトのズレを防ぐのに役立つ場合があります。さらに、２つのコントロールの高さを同じ値に設定することで、より整ったExcelへの出力結果が得られます。     同様に、Excelへのエクスポート時に２つのコントロールを同じ行に入れたい場合は、２つのコントロールに同一のTopプロパティ値、およびフォントを設定し、幅をできる限り同じ長さに設定する必要があります。          ActiveReports内でRichTextコントロールを使用すると、Excel出力のフォーマットが不完全なものになる場合がよくあります。Pageオブジェクトの描画メソッドを使用してエクスポートの余白領域に項目を描画すると、ページ割り付けの問題が発生します。ページ上に項目を描画したExcelエクスポート出力の印刷時にページ割り付けを正確に維持するには、項目を余白領域には描画しないでください。</remarks>
+        </member>
+        <member name="T:DataDynamics.ActiveReports.Export.Xls.FileFormat">
+            <summary>出力されたファイルにおける、Excelファイル形式を設定します。</summary>
+        </member>
+        <member name="F:DataDynamics.ActiveReports.Export.Xls.FileFormat.Xls97Plus">
+            <summary>Excelデータは、BIFF8（Microsoft Binary Interchange File Formatバージョン8）の規格を満たしたものであり、このBIFF8はMicrosoft Excel 97、2000、XP、2003に対応した形式です。</summary>
+        </member>
+        <member name="F:DataDynamics.ActiveReports.Export.Xls.FileFormat.Xls95">
+            <summary>Excelデータは、BIFF7（Microsoft Binary Interchange File Formatバージョン7）の規格を満たしたものであり、このBIFF7はMicrosoft Excel 95に対応した形式です。</summary>
+        </member>
+        <member name="T:DataDynamics.ActiveReports.Export.Xls.XlsExport">
+            <summary>ActiveReportsドキュメントからExcelファイルを作成するための機能を提供します。</summary>
+        </member>
+        <member name="M:DataDynamics.ActiveReports.Export.Xls.XlsExport.#ctor">
+            <summary>XlsExportクラスの新しいインスタンスを初期化します。</summary>
+        </member>
+        <member name="M:DataDynamics.ActiveReports.Export.Xls.XlsExport.Export">
+            <summary>指定したドキュメントをExcel形式にエクスポートします。</summary>
+            <remarks>    レポート上の出力が以下の条件に当てはまる場合にのみ、Excel     形式へ出力した際のセルの書式設定は自動的に設定されます。                                            レポート上の出力                 セルの書式設定                                           ","（カンマ）を含んだ数値の場合                 通貨型                                           ","（カンマ）を含まない数値の場合                 ユーザー定義型                                           ""を含んだ数値の場合                 パーセンテージ型                           </remarks>
+        </member>
+        <member name="M:DataDynamics.ActiveReports.Export.Xls.XlsExport.Export(DataDynamics.ActiveReports.Document.Document,System.String)">
+            <summary>指定したドキュメントをExcelファイルにエクスポートします。</summary>
+            <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+            <param name="filePath">Excelワークブックを保存するファイル名とパス。</param>
+        </member>
+        <member name="M:DataDynamics.ActiveReports.Export.Xls.XlsExport.Export(DataDynamics.ActiveReports.Document.Document,System.String,System.String)">
+            <summary>指定した範囲のドキュメントをExcelファイルにエクスポートします。</summary>
+            <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+            <param name="filePath">Excelワークブックを保存するファイル名とパス。</param>
+            <param name="pageRange">エクスポートするページを、カンマで区切って指定するか、2-8のように開始ページと終了ページを指定します。</param>
+        </member>
+        <member name="M:DataDynamics.ActiveReports.Export.Xls.XlsExport.Export(DataDynamics.ActiveReports.Document.Document,System.IO.Stream)">
+            <summary>指定したドキュメントをExcel形式でストリームにエクスポートします。</summary>
+            <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+            <param name="outputStream">ドキュメントを保存するSystem.IO.Stream。</param>
+        </member>
+        <member name="M:DataDynamics.ActiveReports.Export.Xls.XlsExport.Export(DataDynamics.ActiveReports.Document.Document,System.IO.Stream,System.String)">
+            <summary>指定した範囲のドキュメントをExcel形式でストリームにエクスポートします。</summary>
+            <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+            <param name="outputStream">ドキュメントを保存するSystem.IO.Stream。</param>
+            <param name="pageRange">エクスポートするページを、カンマで区切って指定するか、2-8のように開始ページと終了ページを指定します。</param>
+        </member>
+        <member name="P:DataDynamics.ActiveReports.Export.Xls.XlsExport.AutoRowHeight">
+            <summary>行内で最も大きいオブジェクトに合わせて、Excelが自動的に行の高さを調整するようにするかどうかを指定します。</summary>
+            <remarks>通常、UseCellMergingがtrueの場合、このプロパティはtrueではありません。</remarks>
+        </member>
+        <member name="P:DataDynamics.ActiveReports.Export.Xls.XlsExport.DisplayGridLines">
+            <summary>ワークブック内のグリッド線を表示するかどうかを取得または設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.ActiveReports.Export.Xls.XlsExport.FileFormat">
+            <summary>出力するExcelファイル形式のバージョンを取得または設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.ActiveReports.Export.Xls.XlsExport.MinColumnWidth">
+            <summary>エクスポートされたファイル内における、空の列の最小幅（Twips単位）を取得または設定します。</summary>
+            <remarks>これは通常、Excelへのエクスポート時に微調整する単一の最も重要な変数です。</remarks>
+        </member>
+        <member name="P:DataDynamics.ActiveReports.Export.Xls.XlsExport.MinRowHeight">
+            <summary>エクスポートされたファイル内における、空の行の最小の高さ（Twips単位）を取得または設定します。</summary>
+            <remarks>MinRowHeightプロパティは、UseCellMergingプロパティをTrueに設定した場合にのみ有効になります。</remarks>
+        </member>
+        <member name="P:DataDynamics.ActiveReports.Export.Xls.XlsExport.MultiSheet">
+            <summary>レポートを１枚のExcelシートとして作成するか、マルチシートのワークブックとして生成するかを指定します。</summary>
+            <remarks>Trueのとき、ActiveReportsドキュメント内の各ページは、それぞれ個別のExcelシートとしてエクスポートされます。</remarks>
+        </member>
+        <member name="P:DataDynamics.ActiveReports.Export.Xls.XlsExport.RemoveVerticalSpace">
+            <summary>出力結果から、空の行間を完全に取り除くかどうかを、取得または設定します。</summary>
+            <remarks>このプロパティを使用することで、Excelから印刷する場合に、ページ割り付けを向上させる可能性があります。</remarks>
+        </member>
+        <member name="P:DataDynamics.ActiveReports.Export.Xls.XlsExport.Tweak">
+            <summary>内部使用のみ。</summary>
+        </member>
+        <member name="P:DataDynamics.ActiveReports.Export.Xls.XlsExport.UseCellMerging">
+            <summary>セルをマージすべきかどうかを取得または設定します。</summary>
+        </member>
+        <member name="T:DataDynamics.ActiveReports.Export.Xls.XlsExportException">
+            <summary>Excelエクスポートでエラーが発生したときにスローされる例外です。</summary>
+        </member>
+        <member name="M:DataDynamics.ActiveReports.Export.Xls.XlsExportException.#ctor">
+            <summary>ExcelExportExceptionクラスの新しいインスタンスを初期化します。</summary>
+        </member>
+        <member name="M:DataDynamics.ActiveReports.Export.Xls.XlsExportException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>シリアル化したデータを指定して、XlsExportExceptionクラスの新しいインスタンスを初期化します。</summary>
+            <remarks>このコンストラクタは、逆シリアル化中に、ストリームで送信された例外オブジェクトを再構築するために呼び出されます。</remarks>
+            <param name="info">    スローされている例外に関するシリアル化済みオブジェクト     データを保持しているSerializationInfo。</param>
+            <param name="context">転送元または転送先に関するコンテキスト情報を含んでいるStreamingContext。</param>
+        </member>
+        <member name="M:DataDynamics.ActiveReports.Export.Xls.XlsExportException.#ctor(System.String)">
+            <summary>エラー メッセージを指定して、XlsExportExceptionクラスの新しいインスタンスを初期化します。</summary>
+            <param name="message">例外の原因を説明するエラーメッセージ。</param>
+        </member>
+        <member name="M:DataDynamics.ActiveReports.Export.Xls.XlsExportException.#ctor(System.String,System.Exception)">
+            <summary>エラーメッセージ、およびこの例外の原因である内部例外への参照を指定して、XlsExportExceptionクラスの新しいインスタンスを初期化します。</summary>
+            <param name="message">例外の原因を説明するエラーメッセージ。</param>
+            <param name="innerException">現在の例外の原因であるExceptionインスタンス。innerExceptionパラメーターがnull参照(Visual Basicの場合はNothing)でない場合、現在の例外は、内部の例外を処理するcatchブロックで発生します。</param>
+        </member>
+        <member name="N:DataDynamics.SpreadBuilder">
+            <summary>DataDynamics.SpreadBuilder名前空間には、Excelスプレッドシートの構築に使用されるColumn、Row、Sheet、Workbookの各クラスが含まれています。</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.BiffVersion">
+            <summary>BIFFのバージョンです。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.BiffVersion.V7">
+            <summary>FileVersionプロパティの値をV7に設定して出力したExcelデータは、BIFF7（Microsoft Binary Interchange File Formatバージョン7）の規格を満たしたものであり、このBIFF7はMicrosoft Excel 95に対応した形式です。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.BiffVersion.V8">
+            <summary>FileVersionプロパティの値をV8に設定して出力したExcelデータは、BIFF8（Microsoft Binary Interchange File Formatバージョン8）の規格を満たしたものであり、このBIFF8はMicrosoft Excel 97、2000、XP、2003に対応した形式です。</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.CompressionException">
+            <summary>圧縮ライブラリで、画像に関連するエラーが発生したときにスローされる例外です。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.CompressionException.#ctor">
+            <summary>CompressionExceptionクラスの新しいインスタンスを初期化します。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.CompressionException.#ctor">
+            <summary>CompressionExceptionクラスの新しいインスタンスを初期化します。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.CompressionException.#ctor(System.String)">
+            <summary>エラーメッセージを指定して、CompressionExceptionクラスの新しいインスタンスを初期化します。</summary>
+            <param name="sMessage">例外の原因を説明するエラーメッセージ。</param>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.CompressionException.#ctor(System.String,System.Exception)">
+            <summary>エラーメッセージ、およびこの例外の原因である内部例外への参照を指定して、CompressionExceptionクラスの新しいインスタンスを初期化します。</summary>
+            <param name="sMessage">例外の原因を説明するエラーメッセージ。</param>
+            <param name="oInnerException">現在の例外の原因であるExceptionインスタンス。innerExceptionパラメーターがnull参照(Visual Basicの場合はNothing)でない場合、現在の例外は、内部の例外を処理するcatchブロックで発生します。</param>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.DDColumn">
+            <summary>シート内の単一の列を表します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.DDColumn.Column">
+            <summary>列の番号を返します（０から始まります）。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.DDColumn.OwnerSheet">
+            <summary>列が置かれているDDSheetオブジェクトを返します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.DDColumn.Width">
+            <summary>列の幅を設定または取得します（Twips単位）。</summary>
+            <remarks>値は、Excelのシステム単位（文字幅の1/256）に変換されます。</remarks>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.DDRow">
+            <summary>シート内の単一の行を表します。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDRow.#ctor(DataDynamics.SpreadBuilder.DDSheet,System.Int32)">
+            <summary>指定した親シートおよび行の番号の、DDRowインスタンスを作成します。</summary>
+            <param name="parentSheet">親となるシート。</param>
+            <param name="row">インスタンスが表す行番号（０から始まります）。</param>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.DDRow.AutoSize">
+            <summary>Excelが、コンテンツに合わせて行の高さを自動調整するかどうかを設定または取得します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.DDRow.Height">
+            <summary>行の高さを設定または取得します（Twips単位）。</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.DDSheet">
+            <summary>ワークシートを表します。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDSheet.AddHorizontalPageBreak(System.UInt16,System.UInt16,System.UInt16)">
+            <summary>水平方向（行）のページ区切りを追加します。</summary>
+            <remarks>         ページ区切りはオーバーラップできません。ページ区切りは、指定した行または列の後ろに追加されます。たとえば、rowに３を指定した場合、ページ区切りは     ３行目と４行目の間になります。</remarks>
+            <param name="row">ページ区切りを追加する行（１から始まります）。</param>
+            <param name="columnstart">ページ区切りを開始する列（１から始まります）。</param>
+            <param name="columnend">ページ区切りを終了する列（１から始まります）。</param>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDSheet.AddImage(System.Drawing.Image,DataDynamics.SpreadBuilder.Imaging.ImageInfo,System.Drawing.Color,System.Drawing.Color,System.Int16,System.Int16,System.Int16,System.Int16,System.Int16,System.Int16,System.Int16,System.Int16,System.String)">
+            <summary>指定した画像（PNG形式で格納されます）を、位置およびプロパティを指定してシートに追加します。</summary>
+            <param name="img">シートに配置するイメージを表す画像オブジェクト。</param>
+            <param name="imageOptions">SpreadBuilder.Imaging.ImageInfo。</param>
+            <param name="lineColor">画像上の罫線のSystem.Drawing.Color。</param>
+            <param name="backColor">画像の背景のSystem.Drawing.Color。</param>
+            <param name="colL">画像を配置する左上角の列（０～）。</param>
+            <param name="dxL">TcolLで指定したセルの水平方向のどの位置に配置するかを、セル幅の1/1024単位で表す。</param>
+            <param name="rwT">画像を配置する左上角の行（０～）。</param>
+            <param name="dyT">rwTで指定したセルの垂直方向のどの位置に配置するかを、セルの高さの1/256単位で表す 。</param>
+            <param name="colR">画像を配置する右下角の列（０～）。</param>
+            <param name="dxR">colRで指定したセルの水平方向のどの位置に配置するかを、セル幅の1/1024単位で表す。</param>
+            <param name="rwB">画像を配置する右下角の行（０～）。</param>
+            <param name="dyB">rwBで指定したセルの垂直方向のどの位置に配置するかを、セルの高さの1/256単位で表す。</param>
+            <param name="hyperlink">画像にハイパーリンクを設定する場合は、ここにURLを指定します。設定しない場合は、空の文字列にします。</param>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDSheet.AddLine(DataDynamics.SpreadBuilder.Imaging.LineInfo)">
+            <summary>座標およびプロパティを指定して、線を追加します。</summary>
+            <param name="li">適切な線設定値に設定されたメンバを持つLineInfoオブジェクト。詳細については、LineInfoクラスを参照してください。</param>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDSheet.AddVerticalPageBreak(System.UInt16,System.UInt16,System.UInt16)">
+            <summary>垂直方向（列）のページ区切りを追加します。</summary>
+            <remarks>         ページ区切りはオーバーラップできません。ページ区切りは、指定した行または列の後ろに追加されます。たとえば、colに３を指定した場合、ページ区切りは３列目と４列目の間になります。</remarks>
+            <param name="col">ページ区切りを追加する列（１から始まります）。</param>
+            <param name="rowstart">ページ区切りを開始する行（１から始まります）。</param>
+            <param name="rowend">ページ区切りを終了する行（１から始まります）。</param>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDSheet.Cell(System.Int32,System.Int32)">
+            <summary>指定した行および列を表す  DDCell オブジェクトを返します。</summary>
+            <remarks>         指定したiRowまたはiColumnが有効な範囲内にない場合は、ArgumentOutOfRangeExceptionがスローされます。iRowに設定可能な最大値は65535で、iColumnは255です。最小値はどちらの場合も0です。</remarks>
+            <returns>指定した行および列を表すDDCellオブジェクト</returns>
+            <param name="iRow">セルの行番号（０から始まります）。</param>
+            <param name="iColumn">セルの列番号（０から始まります）。</param>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDSheet.Cells(DataDynamics.SpreadBuilder.Cells.DDCell,DataDynamics.SpreadBuilder.Cells.DDCell)">
+            <summary>指定した範囲の  DDCells オブジェクトを返します。</summary>
+            <param name="start">始点のセル位置を示すDDCell</param>
+            <param name="end">終点のセル位置を示すDDCell</param>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDSheet.Clear">
+            <summary>すべてのプロパティおよびコンテンツを削除し、空のシートを効率的に作成します。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDSheet.Columns(System.Int16)">
+            <summary>指定した列を表すDDColumnオブジェクトを返します。</summary>
+            <returns>指定した列を表すDDColumnオブジェクト</returns>
+            <param name="column">列のインデックス（０から始まる正数）。</param>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDSheet.IsMerged(System.Int32,System.Int32)">
+            <summary>指定したセルが、マージされたグループに属する場合にtrueを返します。</summary>
+            <returns>ブール値。デフォルト値はFalseです。</returns>
+            <param name="row">マージ状態をチェックするセルが存在する行（０ベース）。</param>
+            <param name="column">マージ状態をチェックするセルが存在する列（０ベース）。</param>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDSheet.Rows(System.Int32)">
+            <summary>指定した行を表すDDRowオブジェクトを返します。</summary>
+            <returns>指定した行を表すDDRowオブジェクト</returns>
+            <param name="iRow">DDRowを表す行のインデックス（０から始まる正数）。</param>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDSheet.UnMergeCells(System.Int32,System.Int32)">
+            <summary>シートの指定したセルにマージされているマージ領域を解除し、それぞれ個々の値とスタイルを持つ別個のセルにします。</summary>
+            <param name="row">マージを解除する行（０～）。</param>
+            <param name="column">マージを解除する列（０～）。</param>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.DDSheet.DisplayGridLines">
+            <summary>グリッド線をシートに表示するかどうかを示すフラグを、設定または取得します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.DDSheet.Name">
+            <summary>シートの名前を設定または取得します。</summary>
+            <remarks>         指定したシート名がすでに存在する場合は、DDSheetNameAlreadyExistsException例外がスローされます。また、指定したシート名が無効な値（ex.空の文字列）の場合は、ArgumentException例外がスローされます。FileVersion     プロパティにV7を指定した場合、DBCS（2バイトコード）文字を出力できません。</remarks>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.DDSheet.PageSetup">
+            <summary>シートの現在の情報を表すPageSetupクラスを印刷時に返します。この情報は、Excelの［ページ設定］ダイアログボックスに表示されます。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.DDSheet.ParentSheets">
+            <summary>DDSheetオブジェクトが属するDDSheetsコレクションを返します。</summary>
+            <remarks>このプロパティは、読み込みのみです。</remarks>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.DDSheetNameAlreadyExistsException">
+            <summary>Nameプロパティをすでに使用されている値に設定しようとするとスローされます。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDSheetNameAlreadyExistsException.#ctor">
+            <summary>DDSheetNameAlreadyExistsExceptionクラスの新しいインスタンスを初期化します。</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.DDSheets">
+            <summary>DDSheetオブジェクトのコレクションです。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDSheets.AddNew">
+            <summary>空のDDSheetオブジェクトをコレクションに追加し、そのオブジェクトへの参照を返します。</summary>
+            <returns>新しく追加されたDDSheetオブジェクト</returns>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDSheets.Clear">
+            <summary>コレクションに含まれるすべてのDDSheetオブジェクトを削除します。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDSheets.GetEnumerator">
+            <summary>DDSheetsコレクションに含まれるDDSheetオブジェクトを列挙するためのIEnumeratorオブジェクトを返します。コレクションではfor eachステートメントを使用できます。</summary>
+            <returns>IEnumeratorオブジェクト。</returns>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDSheets.Move">
+            <summary>シートを、指定した位置へ移動します。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDSheets.Move(System.String,System.Int16)">
+            <summary>指定した名前を持つシートを、指定した別の位置に移動します。</summary>
+            <param name="sName">移動するシートの名前。</param>
+            <param name="newPosition">移動させる新しいシートの位置。新しい位置が０未満である場合、シートはコレクションの先頭(０)に移動されます。新しい位置がこのコレクションの上限より大きな場合、シートはコレクションの末尾に移動されます。</param>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDSheets.Move(System.Int16,System.Int16)">
+            <summary>指定した位置にあるシートを、指定した別の位置に移動します。</summary>
+            <param name="oldPosition">移動するシートの位置。</param>
+            <param name="newPosition">移動させる新しいシートの位置。新しい位置が０未満である場合、シートはコレクションの先頭(０)に移動されます。新しい位置がこのコレクションの上限より大きな場合、シートはコレクションの末尾に移動されます。</param>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDSheets.RemoveAt(System.Int32)">
+            <summary>指定したインデックス位置にあるDDSheetをコレクションから削除します。</summary>
+            <param name="iIndex">削除するDDSheetのインデックス。インデックスは０から始まります。</param>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDSheets.Select">
+            <summary>Excelでファイルを開いたときに選択された状態となるシートを指定します。指定したインデックス位置にあるシートを選択し、その他のシートをすべて選択されていない状態にします。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDSheets.Select(System.String)">
+            <summary>指定した名前を持つシートを選択し、その他のシートをすべて選択されていない状態にします。</summary>
+            <param name="sheetName">選択するDDSheetオブジェクトのNameプロパティの値 。</param>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.DDSheets.Select(System.Int32)">
+            <summary>指定したインデックス位置にあるシートを選択し、その他のシートをすべて選択されていない状態にします。</summary>
+            <param name="sheetIndex">選択するシートのインデックス（０～）。</param>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.DDSheets.Count">
+            <summary>DDSheetsコレクションに含まれる要素の数を取得します。</summary>
+            <remarks>このプロパティは、読み込みのみです。</remarks>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.DDSheets.Item">
+            <summary>指定したDDSheetを取得します。</summary>
+            <remarks>このプロパティは、読み込みのみです。</remarks>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.DDSheets.Item(System.Int32)">
+            <summary>指定したインデックス位置にあるDDSheetを取得します。C# では、このプロパティはDDSheetsクラスのインデクサになります。</summary>
+            <param name="iIndex">コレクション内の、取得するDDSheetのインデックス。</param>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.DDSheets.Item(System.String)">
+            <summary>指定した名前を持つDDSheetを取得します。C# では、このプロパティはDDSheetsクラスのインデクサになります。指定した名前のDDSheetがコレクションに存在しない場合は、nullが返されます。</summary>
+            <remarks>sheetName引数は、大文字／小文字を区別せずに比較します。</remarks>
+            <param name="sheetName">取得するDDSheetの名前。</param>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.NoDDSheetsException">
+            <summary>Sheetsコレクション内の１つ以上のシートを操作したとき（たとえば、ワークブックを保存したとき）にスローされる例外です。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.NoDDSheetsException.#ctor">
+            <summary>NoDDSheetsExceptionクラスの新しいインスタンスを初期化します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.NoDDSheetsException.Message">
+            <summary>例外の原因を説明するエラーメッセージを返します。</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.SpreadBuilderException">
+            <summary>DataDynamics.SpreadBuilderアセンブリでアプリケーションエラーが発生したときにスローされる一般的な例外です。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.SpreadBuilderException.#ctor">
+            <summary>SpreadBuilderExceptionクラスの新しいインスタンスを初期化します。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.SpreadBuilderException.#ctor">
+            <summary>SpreadBuilderExceptionクラスの新しいインスタンスを初期化します。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.SpreadBuilderException.#ctor(System.String)">
+            <summary>エラーメッセージを指定して、SpreadBuilderExceptionクラスの新しいインスタンスを初期化します。</summary>
+            <param name="message">例外の原因を説明するエラーメッセージ。</param>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.SpreadBuilderException.#ctor(System.String,System.Exception)">
+            <summary>エラーメッセージ、およびこの例外の原因である内部例外への参照を指定して、SpreadBuilderExceptionクラスの新しいインスタンスを初期化します。</summary>
+            <param name="message">例外の原因を説明するエラーメッセージ。</param>
+            <param name="innerException">現在の例外の原因であるExceptionインスタンス。innerExceptionパラメーターがnull参照(Visual Basicの場合はNothing)でない場合、現在の例外は、内部の例外を処理するcatchブロックで発生します。</param>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.VersionNotImplementedException">
+            <summary>Excelファイル形式／BIFFファイル形式の特定のバージョンに、１つまたは複数の機能が実装されなかったときにスローされる例外です。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.VersionNotImplementedException.#ctor">
+            <summary>VersionNotImplementedExceptionクラスの新しいインスタンスを初期化します。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.VersionNotImplementedException.#ctor(System.String)">
+            <summary>エラーメッセージを指定して、VersionNotImplementedExceptionクラスの新しいインスタンスを初期化します。</summary>
+            <param name="message">例外の原因を説明するエラーメッセージ。</param>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.VersionNotImplementedException.#ctor(System.String,System.Exception)">
+            <summary>エラーメッセージ、およびこの例外の原因である内部例外への参照を指定して、VersionNotImplementedExceptionクラスの新しいインスタンスを初期化します。</summary>
+            <param name="message">例外の原因を説明するエラーメッセージ。</param>
+            <param name="innerException">現在の例外の原因であるExceptionインスタンス。innerExceptionパラメーターがnull参照(Visual Basicの場合はNothing)でない場合、現在の例外は、内部の例外を処理するcatchブロックで発生します。</param>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.VersionNotImplementedException.Message">
+            <summary>例外の原因を説明するエラーメッセージを返します。</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Workbook">
+            <summary>複数のシートを含むワークブックを表します。このオブジェクトは、ワークブック内のすべてのシートに関する情報（著者、BIFFファイルのバージョン、など）を表します。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.Workbook.#ctor">
+            <summary>Workbookクラスの新しいインスタンスを初期化します。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.Workbook.Clear">
+            <summary>すべてのシートを削除し、すべてのメンバのクラス変数のインスタンスを新規作成し、データ変数をデフォルトの値に初期化します。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.Workbook.Save">
+            <summary>現在のワークブックを保存します。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.Workbook.Save(System.IO.Stream)">
+            <summary>現在のワークブックを、指定したストリームに保存します。</summary>
+            <param name="outputStream">         ワークブックのデータを保存する出力ストリーム（MemoryStream、HttpResponse.OutputStreamなど）。</param>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.Workbook.Save(System.String)">
+            <summary>現在のワークブックを、指定したファイルに保存します。</summary>
+            <remarks>指定したファイルへの書き込み権限が設定されている必要があります。</remarks>
+            <param name="filePath">保存先のファイル名。</param>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Workbook.Author">
+            <summary>ワークブックに書き込まれる著者を設定または取得します。</summary>
+            <remarks>    Microsoft     Excelでワークブックを書き込む場合は、この名前はExcelをインストールする際に入力したユーザー名になります。</remarks>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Workbook.FileVersion">
+            <summary>シートを保存するExcelのバージョン（BIFFのバージョン）を設定または取得します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Workbook.ProtectWorkBookStructure">
+            <summary>シート構成を保護するかどうかを設定または取得します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Workbook.ProtectWorkbookWindows">
+            <summary>ウィンドウを保護するかどうかを設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Workbook.Sheets">
+            <summary>シートのコレクションを、DDSheetsコレクションオブジェクトで返します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Workbook.DefaultFontName">
+            <summary>デフォルトのフォントの名前を返します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Workbook.DefaultFontSizeInPoints">
+            <summary>デフォルトのフォントのサイズを返します（point単位）。</summary>
+        </member>
+        <member name="N:DataDynamics.SpreadBuilder.Cells">
+            <summary>DataDynamics.SpreadBuilder.Cells名前空間には、DDCellクラスが含まれています。</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Cells.BiffCellBoolErrValues">
+            <summary> SetValue(BiffCellBoolErrValue) メソッドで設定可能な値です。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Cells.BiffCellBoolErrValues.Null">
+            <summary>ERROR.TYPE(エラー値) #NULL! を意味します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Cells.BiffCellBoolErrValues.False">
+            <summary>論理値FALSEを意味します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Cells.BiffCellBoolErrValues.True">
+            <summary>論理値TRUEを意味します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Cells.BiffCellBoolErrValues.Div0">
+            <summary>ERROR.TYPE(エラー値) #DIV/0! を意味します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Cells.BiffCellBoolErrValues.Value">
+            <summary>ERROR.TYPE(エラー値) #VALUE! を意味します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Cells.BiffCellBoolErrValues.Ref">
+            <summary>ERROR.TYPE(エラー値) #REF! を意味します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Cells.BiffCellBoolErrValues.Name">
+            <summary>ERROR.TYPE(エラー値) #NAME? を意味します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Cells.BiffCellBoolErrValues.Num">
+            <summary>ERROR.TYPE(エラー値) #NUM! を意味します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Cells.BiffCellBoolErrValues.NA">
+            <summary>ERROR.TYPE(エラー値) #N/Aを意味します。</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Cells.CellTypes">
+            <summary>SpreadBuilderがサポートする、シート内のセルの種類です。値はDDCellクラスの  Type プロパティで使用します。</summary>
+            <remarks>         現時点では、Excelのファイル形式は、DDCellがサポートするものより多くの種類のセルをサポートしています。</remarks>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Cells.CellTypes.Blank">
+            <summary>SetValueBlankを使用してセルをクリアした場合、もしくは何も値を設定していない場合</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Cells.CellTypes.Label">
+            <summary>SetValue(string) を使用してセルに値を設定した場合</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Cells.CellTypes.Number">
+            <summary>SetValue(double)を使用してセルに値を設定た場合</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Cells.CellTypes.BoolErr">
+            <summary>SetValue(BiffCellBoolErrValues) を使用してセルに値を設定した場合</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Cells.MergeArea">
+            <summary>    スプレッドシート内のマージ矩形領域を表す構造体。     この型のすべてのメンバの一覧については、MergeAreaメンバを参照してください。</summary>
+            <remarks>         この構造体は不変です。いったんインスタンスが初期化されると値を変更できません。既存のMergeAreaを拡大または縮小するには、既存のものを削除し、拡大または縮小した領域を表す新しいMergeAreaを追加します。</remarks>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.Cells.MergeArea.#ctor(System.UInt16,System.UInt16,System.UInt16,System.UInt16)">
+            <summary>指定した行と列から指定した行と列までのMergeArea構造体の新しいインスタンスを初期化します。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.Cells.MergeArea.ContainsCell(System.Int32,System.Int32)">
+            <summary>指定したセルがMergeAreaに含まれているかどうかを示すブール値を返します。</summary>
+            <param name="row">セルの行。</param>
+            <param name="column">セルの列。</param>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.MergeArea.ColumnFrom">
+            <summary>マージ領域の最左列。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.MergeArea.ColumnTo">
+            <summary>マージ領域の最右列。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.MergeArea.RowFrom">
+            <summary>マージ領域の先頭行。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.MergeArea.RowTo">
+            <summary>マージ領域の末尾行。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Cells.MergeArea.Empty">
+            <summary>空のマージ領域を表します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Cells.MergeArea.SizeOf">
+            <summary>BIFFに書き込むときのマージ領域のサイズを返します。</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Cells.DDCell">
+            <summary>シート内の単一のセルを表します。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.Cells.DDCell.GetValue">
+            <summary>セルの現在の値を返します。</summary>
+            <returns>         返される値の種類は次のいずれかになります。null参照（セルの種類がCellTypes.Blankの場合）、System.String（セルの種類がCellTypes.Labelの場合）、System.Double（セルの種類がCellTypes.Numberの場合）、またはBiffCellBoolErrValues列挙体の１つの値（セルの種類がCellTypes.BoolErrの場合）。値を返す前にDDCellのTypeプロパティを使用してセルの種類を判断するか、返された値の種類をチェックします。</returns>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.Cells.DDCell.Merge(System.UInt16,System.UInt16)">
+            <summary>セルを隣接するセルにマージします。</summary>
+            <param name="numberOfRowsToMerge">下方向にマージする行数。１に設定すると、１つ下のセルとマージされます。</param>
+            <param name="numberOfColumnsToMerge">マージする列数。１に設定すると、１つ右隣のセルとマージされます。</param>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.Cells.DDCell.SetValue">
+            <summary>指定したセルのタイプに、現在の値を格納します。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.Cells.DDCell.SetValue(System.Double)">
+            <summary>指定した数値をセルに格納します。セルの  TypeはCellTypes.Numberに設定されます。</summary>
+            <param name="dblValue">セルの値として格納する数値。</param>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.Cells.DDCell.SetValue(System.String)">
+            <summary>指定した文字列をセルに格納します。セルの  TypeはCellTypes.Labelに設定されます。</summary>
+            <param name="sValue">セルの値として格納する文字列。</param>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.Cells.DDCell.SetValue(DataDynamics.SpreadBuilder.Cells.BiffCellBoolErrValues)">
+            <summary>指定したBiffCellBoolErrValues列挙体の値をセルに格納します。セルの  Type はCellTypes.BoolErrに設定されます。</summary>
+            <param name="boolerrValue">セルに格納するBiffCellBoolErrValues列挙体の値。</param>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.Cells.DDCell.SetValueBlank">
+            <summary>セルのTypeをCellTypes.Blankに設定し、現在の値をクリアします。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.Cells.DDCell.UnMerge">
+            <summary>セルに現在マージされているすべてのセルのマージを解除し、それぞれ個々の値とスタイルを持つ別個のセルにします。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.Alignment">
+            <summary>セルの水平方向の文字の配置（横位置）を設定または取得します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.BorderBottomColor">
+            <summary>下罫線の色を設定または取得します。</summary>
+            <remarks>         BorderColor関連のプロパティの実装については、BorderTopColorプロパティを参照してください。</remarks>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.BorderBottomStyle">
+            <summary>セルの下罫線の描画に使用する線のスタイルを設定または取得します。</summary>
+            <remarks>BorderBottomColorプロパティが効力を持つには、このプロパティを設定する必要があります。</remarks>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.BorderDiagonalColor">
+            <summary>斜線の色を設定または取得します。</summary>
+            <remarks>         BorderColor関連のプロパティの実装については、BorderTopColorプロパティを参照してください。</remarks>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.BorderDiagonalEnum">
+            <summary>斜線を右上がりにするか左上がりにするか両方（この場合はセルがXになります）にするかを設定または取得します。</summary>
+            <remarks>         このプロパティの設定を省略した場合は、BorderDiagonalStyles.None=になり、斜線は表示されません。</remarks>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.BorderDiagonalStyle">
+            <summary>斜線の描画に使用する線のスタイルを設定または取得します。</summary>
+            <remarks>デフォルトは、BorderLineStyle.None（罫線なし）になります。</remarks>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.BorderLeftColor">
+            <summary>左罫線の色を設定または取得します。</summary>
+            <remarks>         BorderColor関連のプロパティの実装については、BorderTopColorプロパティを参照してください。</remarks>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.BorderLeftStyle">
+            <summary>セルの左罫線の描画に使用する線のスタイルを設定または取得します。</summary>
+            <remarks>BorderLeftColorプロパティが効力を持つには、このプロパティを設定する必要があります。</remarks>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.BorderRightColor">
+            <summary>右罫線の色を設定または取得します。</summary>
+            <remarks>         BorderColor関連のプロパティの実装については、BorderTopColorプロパティを参照してください。</remarks>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.BorderRightStyle">
+            <summary>セルの右罫線の描画に使用する線のスタイルを設定または取得します。</summary>
+            <remarks>BorderRightColorプロパティが効力を持つには、このプロパティを設定する必要があります。</remarks>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.BorderTopColor">
+            <summary>上罫線の色を設定または取得します。</summary>
+            <remarks>BorderTopStyleプロパティが設定されていない場合、このプロパティは効力を持ちません。</remarks>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.BorderTopStyle">
+            <summary>セルの上罫線の描画に使用する線のスタイルを設定または取得します。</summary>
+            <remarks>BorderTopColorプロパティが効力を持つには、このプロパティを設定する必要があります。</remarks>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.FillColor">
+            <summary>セルの背景色（パターン）を設定または取得します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.FontBold">
+            <summary>太字のフォントを使用するかどうかを設定または取得します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.FontItalic">
+            <summary>斜体のフォントを使用するかどうかを設定または取得します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.FontName">
+            <summary>フォントの名前を設定または取得します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.FontSize">
+            <summary>フォントのサイズを設定または取得します（point単位）。指定した数字は0.5 point単位で一番近いサイズに丸められます。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.FontStrikeOut">
+            <summary>水平のテキスト取り消し線を付けてセル内のテキストを描画するかどうかを示す値を設定するか返します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.FontUnderlineStyle">
+            <summary>セルの下線のスタイルを設定または取得します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.ForeColor">
+            <summary>セルの前景色（テキストの色）を設定または取得します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.Hyperlink">
+            <summary>セルをクリックしたときに、Excelが自動的に立ち上げるセルのハイパーリンクを設定または取得します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.IsMerged">
+            <summary>セルが、マージされたグループに属する場合にTrueを返します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.MergeArea">
+            <summary>セルを含むマージ領域を表すMergeAreaオブジェクトを返します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.NumberFormat">
+            <summary>Excelの数値の表示形式を示す文字列を設定または取得します。</summary>
+            <remarks>    通貨記号、たとえば日本円で表示するには、"[$\-0]#,##0.00"     のような形式の文字列を使用できます。円記号（\）の代わりに任意の通貨記号を使用できます。このプロパティの設定をExcelで正しく表示させるためには、セルに数値が設定されている必要があります。</remarks>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.TextAngle">
+            <summary>セルのテキストの回転角度を設定または取得します。０は回転していない水平の状態を意味します。1～90は上方向に1～90度回転します。91～180は下方向に1～90度回転します。255は垂直になります。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.Type">
+            <summary>DDCellオブジェクトが表すセルの種類を取得します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.VertAlignment">
+            <summary>セルの垂直方向の文字の配置（縦位置）を設定または取得します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCell.WrapText">
+            <summary>セルのテキストを、折り返して全体を表示するかどうかを設定または取得します。</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Cells.DDCells">
+            <summary>シート内のセルのコレクションを表します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.Alignment">
+            <summary>セルの水平方向の文字の配置（横位置）を設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.BorderBottomColor">
+            <summary>下罫線の色を設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.BorderBottomStyle">
+            <summary>セルの下罫線の描画に使用する線のスタイルを設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.BorderDiagonalColor">
+            <summary>斜線の色を設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.BorderDiagonalEnum">
+            <summary>斜線を右上がりにするか左上がりにするか両方（この場合はセルがXになります）にするかを設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.BorderDiagonalStyle">
+            <summary>斜線の描画に使用する線のスタイルを設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.BorderLeftColor">
+            <summary>左罫線の色を設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.BorderLeftStyle">
+            <summary>セルの左罫線の描画に使用する線のスタイルを設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.BorderRightColor">
+            <summary>右罫線の色を設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.BorderRightStyle">
+            <summary>セルの右罫線の描画に使用する線のスタイルを設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.BorderTopColor">
+            <summary>上罫線の色を設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.BorderTopStyle">
+            <summary>セルの上罫線の描画に使用する線のスタイルを設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.Count">
+            <summary>DDCells内のセル数を取得します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.FillColor">
+            <summary>セルの背景色（パターン）を設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.FontBold">
+            <summary>太字のフォントを使用するかどうかを設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.FontItalic">
+            <summary>斜体のフォントを使用するかどうかを設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.FontName">
+            <summary>フォントの名前を設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.FontSize">
+            <summary>フォントのサイズを設定します（point単位）。指定した数字は0.5 point単位で一番近いサイズに丸められます。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.FontStrikeOut">
+            <summary>水平のテキスト取り消し線を付けてセル内のテキストを描画するかどうかを示す値を設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.FontUnderlineStyle">
+            <summary>セルの下線のスタイルを設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.ForeColor">
+            <summary>セルの前景色（テキストの色）を設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.NumberFormat">
+            <summary>Excelの数値の表示形式を示す文字列を設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.TextAngle">
+            <summary>セルのテキストの回転角度を設定します。０は回転していない水平の状態を意味します。1～90は上方向に1～90度回転します。91～180は下方向に1～90度回転します。255は垂直になります。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.VertAlignment">
+            <summary>セルの垂直方向の文字の配置（縦位置）を設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Cells.DDCells.WrapText">
+            <summary>セルのテキストを、折り返して全体を表示するかどうかを設定します。</summary>
+        </member>
+        <member name="N:DataDynamics.SpreadBuilder.Imaging">
+            <summary>DataDynamics.SpreadBuilder.Imaging名前空間は、LineInfoクラスが含まれています。</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Imaging.ImageLineStyle">
+            <summary>画像に接する線のスタイルを指定します。ImageInfo.LineStyleで使用します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.ImageLineStyle.Solid">
+            <summary>実線。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.ImageLineStyle.Dash">
+            <summary>破線。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.ImageLineStyle.Dot">
+            <summary>点線</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.ImageLineStyle.DashDot">
+            <summary>一点鎖線。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.ImageLineStyle.DashDotDot">
+            <summary>二点鎖線。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.ImageLineStyle.Null">
+            <summary>なし。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.ImageLineStyle.DarkGray">
+            <summary>システム定義色。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.ImageLineStyle.MediumGray">
+            <summary>システム定義色。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.ImageLineStyle.LightGray">
+            <summary>システム定義色。</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Imaging.ImageLineWeight">
+            <summary>画像に接する線の太さを指定します。ImageInfo.LineWeightで使用します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.ImageLineWeight.Hairline">
+            <summary>極細線。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.ImageLineWeight.Single">
+            <summary>細線。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.ImageLineWeight.Double">
+            <summary>太線。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.ImageLineWeight.Thick">
+            <summary>極太線。</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Imaging.LineArrowHeadLengths">
+            <summary>Excelで使用する矢印の長さを表します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineArrowHeadLengths.Short">
+            <summary>短い</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineArrowHeadLengths.Medium">
+            <summary>標準</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineArrowHeadLengths.Long">
+            <summary>長い</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Imaging.LineArrowHeadStyles">
+            <summary>Excelで使用する矢印のスタイルを表します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineArrowHeadStyles.None">
+            <summary>なし。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineArrowHeadStyles.Open">
+            <summary>矢印１。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineArrowHeadStyles.Filled">
+            <summary>矢印２。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineArrowHeadStyles.DoubleEndedOpen">
+            <summary>ひし型。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineArrowHeadStyles.DoubleEndedFilled">
+            <summary>丸。</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Imaging.LineArrowHeadWidths">
+            <summary>Excelで使用する矢印の幅を表します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineArrowHeadWidths.Narrow">
+            <summary>細い。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineArrowHeadWidths.Medium">
+            <summary>標準。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineArrowHeadWidths.Wide">
+            <summary>太い。</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Imaging.LineStyles">
+            <summary>BIFFで使用する線のスタイルを表します。ExcelのBIFFファイル形式のバージョンによって、有効でない値があるので注意してください。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineStyles.Solid">
+            <summary>実線</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineStyles.SmallDash">
+            <summary>破線（Excel 2000にはないメニュー項目）</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineStyles.SquareDot">
+            <summary>点線（四角い点）</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineStyles.SmallDashSquareDot">
+            <summary>一点鎖線</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineStyles.SmallDashSquareDotSquareDot">
+            <summary>二点鎖線（Excel 2000にはないメニュー項目）</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineStyles.LooselySpacedSquareDot">
+            <summary>離れている点線（角四角い点）（Excel 2000にはないメニュー項目）</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineStyles.Dash">
+            <summary>破線</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineStyles.LongDash">
+            <summary>長い破線</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineStyles.DashDot">
+            <summary>長い鎖線</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineStyles.LongDashDot">
+            <summary>長い一点鎖線</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineStyles.LongDashDotDot">
+            <summary>長い二点鎖線</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineStyles.RoundDot">
+            <summary>点線（丸い点）</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineStyles.OldTransparent">
+            <summary>透明（線なし）。BIFFのバージョン3、4、5、7でのみ有効</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Imaging.ObjectDirection">
+            <summary>線または画像の向きを決定します。DDSheet.AddLineとDDSheet.AddImageで使用します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.ObjectDirection.UpperLeftToLowerRight">
+            <summary>左上から右下へ</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.ObjectDirection.UpperRightToLowerLeft">
+            <summary>右上から左下へ</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.ObjectDirection.LowerRightToUpperLeft">
+            <summary>右下から左上へ</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.ObjectDirection.LowerLeftToUpperRight">
+            <summary>左下から右上へ</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Imaging.SBFloatingMoveType">
+            <summary>DDSheet.AddLineで使用します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.SBFloatingMoveType.MoveNoSize">
+            <summary>線および画像を、セルの大きさに合わせずに移動する。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.SBFloatingMoveType.MoveSize">
+            <summary>線および画像を、セルの大きさに合わせて移動する。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.SBFloatingMoveType.NoMoveNoSize">
+            <summary>線および画像を、セルの大きさに合わせず、移動もしない。</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Imaging.ImageInfo">
+            <summary>画像に関するさまざまなオプションを指定するために、DDSheet.AddImage によって使用されます。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Imaging.ImageInfo.AutoFill">
+            <summary>書式設定ダイアログボックスのパターンタブで、パターンを自動にするならばTrueを設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Imaging.ImageInfo.AutoSize">
+            <summary>セルに合わせて移動やサイズ変更をするならばTrueを設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Imaging.ImageInfo.FillPattern">
+            <summary>画像の背景を塗りつぶすかどうかを取得または設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Imaging.ImageInfo.LineStyle">
+            <summary>画像の枠線のスタイルを取得または設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Imaging.ImageInfo.LineWeight">
+            <summary>画像の枠線の幅を取得または設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Imaging.ImageInfo.MoveWithCells">
+            <summary>書式設定ダイアログボックスのプロパティタブで、セルに合わせて移動するに設定するならばTrueを設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Imaging.ImageInfo.QuadrantIndex">
+            <summary>画像の始点と終点の方向を定義します。</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Imaging.LineInfo">
+            <summary>罫線情報を表します。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.Imaging.LineInfo.#ctor">
+            <summary>LineInfoクラスの新しいインスタンスを初期化します。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.Imaging.LineInfo.#ctor">
+            <summary>LineInfoクラスの新しいインスタンスを初期化します。</summary>
+        </member>
+        <member name="M:DataDynamics.SpreadBuilder.Imaging.LineInfo.#ctor(System.Int16,System.Int16,System.Int16,System.Int16,System.Int16,System.Int16,System.Int16,System.Int16,DataDynamics.SpreadBuilder.Imaging.ObjectDirection,System.Int32,DataDynamics.SpreadBuilder.Imaging.LineStyles,System.Drawing.Color,System.Boolean,DataDynamics.SpreadBuilder.Imaging.SBFloatingMoveType,DataDynamics.SpreadBuilder.Imaging.LineArrowHeadStyles,DataDynamics.SpreadBuilder.Imaging.LineArrowHeadWidths,DataDynamics.SpreadBuilder.Imaging.LineArrowHeadLengths,DataDynamics.SpreadBuilder.Imaging.LineArrowHeadStyles,DataDynamics.SpreadBuilder.Imaging.LineArrowHeadWidths,DataDynamics.SpreadBuilder.Imaging.LineArrowHeadLengths)">
+            <summary>線をスプレッドシートに描画するために必要なすべての値を設定します。</summary>
+            <param name="colL">列の左端からの距離。</param>
+            <param name="dxL">セルの幅の1/1024の長さを１単位として、セルの左側の境界線からラインの左端までの距離を指定します。つまり、dxL引数に０を渡すとセルの左側の境界線、1023を渡すとセルの右側の境界線の位置になります。したがって511を渡すと、ラインの左端がだいたいセルの中央（横方向）に位置します。</param>
+            <param name="rwT">行の上端からの距離。</param>
+            <param name="dyT">セルの高さの1/256の長さを１単位として、セルの上側の境界線からラインの上端までの距離を指定します。つまり、dyT引数に０を渡すとセルの上側の境界線、255を渡すとセルの右側の境界線の位置になります。したがって127を渡すと、ラインの上端がだいたいセルの中央（縦方向）に位置します。</param>
+            <param name="colR">列の右端からの距離。</param>
+            <param name="dxR">セルの幅の1/1024の長さを１単位として、セルの右側の境界線からラインの右端までの距離を指定します。つまり、dxR引数に０を渡すとセルの右側の境界線の位置になります。</param>
+            <param name="rwB">行の下端からの距離。</param>
+            <param name="dyB">セルの幅の1/256の長さを１単位として、セルの下側の境界線からラインの下端までの距離を指定します。つまり、dyB引数に０を渡すとセルの下側の境界線の位置になります。</param>
+            <param name="iQu">ライン方向を指定するには、ObjectDirection列挙体を使用します。</param>
+            <param name="weight">Excelのラインの太さ。</param>
+            <param name="style">Excelのラインスタイルを決定するには、LineStyle列挙体を設定します。</param>
+            <param name="netColor">System.Drawing.Colorの色を設定します。</param>
+            <param name="MoveType">DataDynamics.SpreadBuilder.Imaging.SBFloatingMoveType列挙体を設定します。</param>
+            <param name="StartAHStyle">Excelの開始矢印のスタイルを決定する、LineArrowHeadStyles列挙体を設定します。</param>
+            <param name="StartAHWidth">Excelの開始矢印の幅を決定する、LineArrowHeadWidths列挙体を設定します。</param>
+            <param name="StartAHLength">Excelの開始矢印の長さを決定する、LineArrowHeadLengths列挙体を設定します。</param>
+            <param name="EndAHStyle">Excelの終了矢印のスタイルを決定する、LineArrowHeadStyles列挙体を設定します。</param>
+            <param name="EndAHWidth">Excelの終了矢印の幅を決定する、LineArrowHeadWidths列挙体を設定します。</param>
+            <param name="EndAHLength">Excelの終了矢印の長さを決定する、LineArrowHeadLengths列挙体を設定します。</param>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineInfo.colL">
+            <summary>列の左端からの距離。</summary>
+            <remarks>負の値は設定できません。</remarks>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineInfo.Color">
+            <summary>Excelのラインの色。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineInfo.colR">
+            <summary>列の右端からの距離。</summary>
+            <remarks>負の値は設定できません。</remarks>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineInfo.dxL">
+            <summary>セルの幅の1/1024の長さを１単位として、セルの左側の境界線からラインの左端までの距離を指定します。つまり、dxL引数に０を渡すとセルの左側の境界線、1023を渡すとセルの右側の境界線の位置になります。したがって511を渡すと、ラインの左端がだいたいセルの中央（横方向）に位置します。</summary>
+            <remarks>負の値は設定できません。</remarks>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineInfo.dxR">
+            <summary>セルの幅の1/1024の長さを１単位として、セルの右側の境界線からラインの右端までの距離を指定します。つまり、dxR引数に０を渡すとセルの右側の境界線の位置になります。</summary>
+            <remarks>負の値は設定できません。</remarks>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineInfo.dyB">
+            <summary>セルの幅の1/256の長さを１単位として、セルの下側の境界線からラインの下端までの距離を指定します。つまり、dyB引数に０を渡すとセルの下側の境界線の位置になります。</summary>
+            <remarks>負の値は設定できません。</remarks>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineInfo.dyT">
+            <summary>セルの高さの1/256の長さを１単位として、セルの上側の境界線からラインの上端までの距離を指定します。つまり、dyT引数に０を渡すとセルの上側の境界線、255を渡すとセルの右側の境界線の位置になります。したがって127を渡すと、ラインの上端がだいたいセルの中央（縦方向）に位置します。</summary>
+            <remarks>負の値は設定できません。</remarks>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineInfo.EndAHLength">
+            <summary>Excelの終了矢印の長さ。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineInfo.EndAHStyle">
+            <summary>Excelの終了矢印のスタイル。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineInfo.EndAHWidth">
+            <summary>Excelの終了矢印の幅。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineInfo.fAuto">
+            <summary>Excelにおける自動罫線オプション。</summary>
+            <remarks>Excelが自動的にボーダーオプションを選ぶようにする場合は、１を設定します。</remarks>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineInfo.iQu">
+            <summary>ライン方向を指定するには、DataDynamics.SpreadBuilder.Imaging.ObjectDirection列挙体を使用します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineInfo.MoveType">
+            <summary>ラインを移動するかリサイズするかを設定します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineInfo.rwB">
+            <summary>行の下端からの距離。</summary>
+            <remarks>負の値は設定できません。</remarks>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineInfo.rwT">
+            <summary>行の上端からの距離。</summary>
+            <remarks>負の値は設定できません。</remarks>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineInfo.StartAHLength">
+            <summary>Excelの開始矢印の長さ。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineInfo.StartAHStyle">
+            <summary>Excelの開始矢印のスタイル。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineInfo.StartAHWidth">
+            <summary>Excelの開始矢印の幅。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineInfo.Style">
+            <summary>線のスタイルを指定します。</summary>
+            <remarks>    Microsoft Excel 97（BIFF8）で使用可能な効果：              0-実線         1-短い破線 (Excel 2000には等しい項目なし)         2-点線（角）         3-短い破線、 点線（角）(Excel 2000には等しい項目なし)         4-短い破線、点線（角）、点線（角）(Excel 2000には等しい項目なし)         5-離れている点線（角四角い点） (Excel 2000には等しい項目なし)　         6-破線         7-長破線         8-一点鎖線         9-長一点鎖線         10-長二点鎖線         11-点線（丸）          バージョン3、4、5と7で使用可能な効果。              0-Solid         1-長破線         2-破線         3-長一点鎖線         4-長二点鎖線         5-パターン 50実線(Excel 2000には等しい項目なし)         6-パターン 75実線 (Excel 2000には等しい項目なし)         7-パターン 25実線 (Excel 2000には等しい項目なし)         15-透明 (線なし)          バージョン2では、線は対応されていません。</remarks>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Imaging.LineInfo.Weight">
+            <summary>線の太さを指定します。</summary>
+            <remarks>    Microsoft Excel 97（BIFF8）で使用可能な効果：              パラメータは、weighパラメータを用いて線を生成します。          バージョン3、4、5と7で使用可能な効果。              0-極細線: 0 ポイント         1-細線: .75 ポイント         2-二重線: 1.35 ポイント         3-太線: 1.95 ポイント          バージョン2では、線は対応されていません。</remarks>
+        </member>
+        <member name="N:DataDynamics.SpreadBuilder.Printing">
+            <summary>DataDynamics.SpreadBuilder.Printing名前空間には、PageSetupクラスがが含まれています。</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Printing.PagePrintOrder">
+            <summary>PageSetup.Orderプロパティで使用します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Printing.PagePrintOrder.DownThenOver">
+            <summary>ページの方向「左から右」</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Printing.PagePrintOrder.OverThenDown">
+            <summary>ページの方向「上から下」</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Printing.PagePrintOrientation">
+            <summary>PageSetup.Orientationプロパティで使用します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Printing.PagePrintOrientation.Landscape">
+            <summary>横</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Printing.PagePrintOrientation.Portrait">
+            <summary>縦</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Printing.PageSetup">
+            <summary>ワークシートのページ設定の情報（余白、用紙サイズなど）を表します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Printing.PageSetup.BlackAndWhite">
+            <summary>ドキュメントの要素を白黒印刷する場合は、trueに設定します。読み取り／書き込み可能なブール型です。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Printing.PageSetup.BottomMargin">
+            <summary>下余白の値を設定または取得します（point単位）。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Printing.PageSetup.Draft">
+            <summary>シートの印刷時に画像を含めない場合はtrueに設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Printing.PageSetup.FirstPageNumber">
+            <summary>先頭ページ番号を設定または取得します。PageSetup.FirstPageNumberAuto（デフォルト）に設定すると、先頭ページ番号は自動になります。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Printing.PageSetup.FitToPage">
+            <summary>〈次のページ数に合わせて印刷〉オプションボタンがONかどうかを返します。</summary>
+            <remarks>         FitToPagesWideプロパティまたはFitToPagesTallプロパティが設定された場合、FitToPageはtrueを返します。これは、［ページ設定］ダイアログボックスの〈次のページ数に合わせて印刷〉オプションボタンがONになることを意味します。FitToPagesWideまたはFitToPagesTallが設定された後でZoomプロパティが設定された場合、あるいはFitToPagesWideプロパティまたはFitToPagesTallプロパティのどちらのプロパティも設定されていない場合は、falseを返します。これは、〈拡大/縮小〉オプションボタンがONになることを意味します。</remarks>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Printing.PageSetup.FitToPagesTall">
+            <summary>ページの高さに合わせて印刷するワークシートのページ数を設定または取得します。</summary>
+            <remarks>         Zoomプロパティがtrueに設定されている場合は、FitToPagesTallプロパティは無効になります。</remarks>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Printing.PageSetup.FitToPagesWide">
+            <summary>ページの幅に合わせて印刷する、ワークシートのページ数を設定または取得します。</summary>
+            <remarks>ZoomプロパティがTrueに設定されている場合、このプロパティは無視されます。</remarks>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Printing.PageSetup.FooterMargin">
+            <summary>ページの下端からフッタまでの距離を設定または取得します（point単位）。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Printing.PageSetup.HeaderMargin">
+            <summary>ページの上端からヘッダまでの距離を設定または取得します（point単位）。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Printing.PageSetup.LeftMargin">
+            <summary>左余白の値を設定または取得します（point単位）。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Printing.PageSetup.Order">
+            <summary>大きなワークシートを印刷する場合に、ページ番号を付ける順番を設定または取得します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Printing.PageSetup.Orientation">
+            <summary>印刷の向き（ページを、横に印刷するか縦に印刷するか）を設定または取得します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Printing.PageSetup.PaperSize">
+            <summary>印刷する用紙のサイズを設定または取得します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Printing.PageSetup.PrintNotes">
+            <summary>コメントを、画面表示イメージで印刷する場合はtrueに設定します。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Printing.PageSetup.RightMargin">
+            <summary>右余白の値を設定または取得します（point単位）。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Printing.PageSetup.TopMargin">
+            <summary>上余白の値を設定または取得します（point単位）。</summary>
+        </member>
+        <member name="P:DataDynamics.SpreadBuilder.Printing.PageSetup.Zoom">
+            <summary>〈拡大/縮小〉オプションボタンをONにし、拡大縮小率を設定します。</summary>
+        </member>
+        <member name="N:DataDynamics.SpreadBuilder.Style">
+            <summary>DataDynamics.SpreadBuilder.Style名前空間には、さまざまなスタイルの列挙体が含まれています。</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Style.BorderDiagonalStyles">
+            <summary>DDCell.BorderDiagonalEnum プロパティで使用します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.BorderDiagonalStyles.None">
+            <summary>斜めの罫線を描画しません。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.BorderDiagonalStyles.Down">
+            <summary>左上端から右下端に向かって罫線を描画します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.BorderDiagonalStyles.Up">
+            <summary>左下端から右上端に向かって罫線を描画します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.BorderDiagonalStyles.Both">
+            <summary>左上端から右下端と、左下端から右上端に向かって罫線を描画します。</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Style.BorderLineStyle">
+            <summary>罫線の描画に使用する線のスタイルです。DDCell.BorderTopStyle、DDCell.BorderBottomStyleプロパティなどで使用します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.BorderLineStyle.None">
+            <summary>なし</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.BorderLineStyle.Thin">
+            <summary>１倍幅の実線</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.BorderLineStyle.Medium">
+            <summary>２倍幅の実線</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.BorderLineStyle.Dashed">
+            <summary>１倍幅の点線（点と点の間が狭い）</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.BorderLineStyle.Dotted">
+            <summary>１倍幅の点線（点と点の間がさらに狭い）</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.BorderLineStyle.Thick">
+            <summary>３倍幅の実線</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.BorderLineStyle.Double">
+            <summary>１倍幅の二重線</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.BorderLineStyle.Hair">
+            <summary>１倍幅の点線</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.BorderLineStyle.MediumDashed">
+            <summary>２倍幅の点線</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.BorderLineStyle.DashDot">
+            <summary>１倍幅の一点鎖線</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.BorderLineStyle.MediumDashDot">
+            <summary>２倍幅の一点鎖線</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.BorderLineStyle.DashDotDot">
+            <summary>１倍幅の二点鎖線</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.BorderLineStyle.MediumDashDotDot">
+            <summary>２倍幅の二点鎖線</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.BorderLineStyle.SlantedDashDot">
+            <summary>２倍幅の一点鎖線（傾斜線）</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Style.FontUnderlineStyles">
+            <summary>下線のスタイルです。DDCell.FontUnderlineStyleプロパティで使用します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.FontUnderlineStyles.None">
+            <summary>下線なし</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.FontUnderlineStyles.Single">
+            <summary>下線</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.FontUnderlineStyles.Double">
+            <summary>二重下線</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.FontUnderlineStyles.SingleAcc">
+            <summary>下線（会計）</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.FontUnderlineStyles.DoubleAcc">
+            <summary>二重下線（会計）</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Style.HorzAlignments">
+            <summary>セルの文字の水平配置（横位置）の種類です。DDCell.Alignmentプロパティで使用します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.HorzAlignments.General">
+            <summary>標準</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.HorzAlignments.Left">
+            <summary>左詰め（インデント）</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.HorzAlignments.Center">
+            <summary>中央揃え</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.HorzAlignments.Right">
+            <summary>右詰め（インデント）</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.HorzAlignments.Fill">
+            <summary>繰り返し</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.HorzAlignments.Justify">
+            <summary>両端揃え</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.HorzAlignments.CenterAcrossSelection">
+            <summary>選択範囲ないで中央</summary>
+        </member>
+        <member name="T:DataDynamics.SpreadBuilder.Style.VertAlignments">
+            <summary>セルの文字の垂直配置（縦位置）の種類です。DDCell.VertAlignmentプロパティで使用します。</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.VertAlignments.Top">
+            <summary>上詰め</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.VertAlignments.Center">
+            <summary>中央揃え</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.VertAlignments.Bottom">
+            <summary>下詰め</summary>
+        </member>
+        <member name="F:DataDynamics.SpreadBuilder.Style.VertAlignments.Justify">
+            <summary>両端揃え</summary>
+        </member>
+    </members>
+</doc>

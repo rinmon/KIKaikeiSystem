@@ -1,0 +1,1731 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7CBBAE38-DC16-4395-A75F-1185D9A20359}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KaikeiSystemBody</RootNamespace>
+    <AssemblyName>KaikeiSystemBody</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ActiveReports.Document, Version=6.3.3424.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff" />
+    <Reference Include="ActiveReports.Viewer6, Version=6.3.3424.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff" />
+    <Reference Include="ActiveReports.XlsExport, Version=6.3.3424.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL" />
+    <Reference Include="ActiveReports6, Version=6.3.3424.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.88.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\share\LicenseFileManager.cs">
+      <Link>LicenseFileManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\share\VersionManager.cs">
+      <Link>VersionManager.cs</Link>
+    </Compile>
+    <Compile Include="controllers\AbstractActivity.cs" />
+    <Compile Include="controllers\BalanceSheetCommentFormController.cs" />
+    <Compile Include="controllers\BalanceSheetFormController.cs" />
+    <Compile Include="controllers\DaikubunFormController.cs" />
+    <Compile Include="controllers\grid\DBPanelGridController.cs" />
+    <Compile Include="controllers\HojoMototyouFormController.cs" />
+    <Compile Include="controllers\HoujinShisetsuFormController.cs" />
+    <Compile Include="controllers\IkkatsuSyoriMasterFormController.cs" />
+    <Compile Include="controllers\JigyouSyuushiFormController.cs" />
+    <Compile Include="controllers\KaikeiDenpyouFormController.cs" />
+    <Compile Include="controllers\KaikeiTanniFormController.cs" />
+    <Compile Include="controllers\KanjouMototyouFormController.cs" />
+    <Compile Include="controllers\KoteiShisanFormController.cs" />
+    <Compile Include="controllers\MainController.cs" />
+    <Compile Include="controllers\MenuFormController.cs" />
+    <Compile Include="controllers\misc\DelayTimerController.cs" />
+    <Compile Include="controllers\misc\FocusController.cs" />
+    <Compile Include="controllers\misc\StickyWindowController.cs" />
+    <Compile Include="controllers\misc\WaitCursorController.cs" />
+    <Compile Include="controllers\popup\AbstractMTPopupController.cs" />
+    <Compile Include="controllers\popup\DenpyouBangouSeiriPopupController.cs" />
+    <Compile Include="controllers\popup\DenpyouInfoPopupController.cs" />
+    <Compile Include="controllers\popup\HojoKamokuPopupController.cs" />
+    <Compile Include="controllers\popup\IkkatsuSyoriPopupController.cs" />
+    <Compile Include="controllers\popup\KamokuPopupController.cs" />
+    <Compile Include="controllers\popup\KoteiShisanDetailPopupController.cs" />
+    <Compile Include="controllers\popup\SubfunctionPopupController.cs" />
+    <Compile Include="controllers\popup\TekiyouPopupController.cs" />
+    <Compile Include="controllers\popup\YosanDaikubunPopupController.cs" />
+    <Compile Include="controllers\popup\YosanHojoKamokuPopupController.cs" />
+    <Compile Include="controllers\popup\YosanKakuninPopupController.cs" />
+    <Compile Include="controllers\popup\YosanKamokuPopupController.cs" />
+    <Compile Include="controllers\popup\YosanListPopupController.cs" />
+    <Compile Include="controllers\popup\YosanYobihiKakuninPopupController.cs" />
+    <Compile Include="controllers\popup\YosanYobihiPopupController.cs" />
+    <Compile Include="controllers\popup\YosanKamokuKubunPopupController.cs" />
+    <Compile Include="controllers\popup\KanjouKamokuDetailPopupController.cs" />
+    <Compile Include="controllers\SikinSyuushiFormController.cs" />
+    <Compile Include="controllers\SyuushiKakuninFormController.cs" />
+    <Compile Include="controllers\TekiyouFormController.cs" />
+    <Compile Include="controllers\TorihikiKubunFormController.cs" />
+    <Compile Include="controllers\YosanFormController.cs" />
+    <Compile Include="controllers\YosanJissekiFormController.cs" />
+    <Compile Include="controllers\PrintMainFormController.cs" />
+    <Compile Include="controllers\PrintYosanFormController.cs" />
+    <Compile Include="controllers\KanjouKamokuFormController.cs" />
+    <Compile Include="controllers\KurikoshiFormController.cs" />
+    <Compile Include="controllers\popup\KanjouMototyouPrintPopupController.cs" />
+    <Compile Include="controllers\RootMenuFormController.cs" />
+    <Compile Include="controllers\TyuukiFormController.cs" />
+    <Compile Include="controllers\KurikoshiSyoriFormController.cs" />
+    <Compile Include="helper\DBBackup.cs" />
+    <Compile Include="helper\View.cs" />
+    <Compile Include="helper\Converter.cs" />
+    <Compile Include="helper\Helper.cs" />
+    <Compile Include="helper\MsgBox.cs" />
+    <Compile Include="helper\Sql.cs" />
+    <Compile Include="models\constants\Constants.cs" />
+    <Compile Include="models\constants\Labels.cs" />
+    <Compile Include="models\constants\MasterTableConstants.cs" />
+    <Compile Include="models\Context.cs" />
+    <Compile Include="models\db\AbstractDatabase.cs" />
+    <Compile Include="models\db\AbstractMasterTable.cs" />
+    <Compile Include="models\db\AbstractTable.cs" />
+    <Compile Include="models\db\AbstractVirtualTable.cs" />
+    <Compile Include="models\db\BufferedTable.cs" />
+    <Compile Include="models\db\CSVParser.cs" />
+    <Compile Include="models\db\KaikeiDatabase.cs" />
+    <Compile Include="models\db\KaikeiDatabaseHandler.cs" />
+    <Compile Include="models\db\mtables\MTDaikubun.cs" />
+    <Compile Include="models\db\mtables\MTGensyouJiyuu.cs" />
+    <Compile Include="models\db\mtables\MTHojoKamoku.cs" />
+    <Compile Include="models\db\mtables\MTHoujinDantai.cs" />
+    <Compile Include="models\db\mtables\MTHoujinShisetsu.cs" />
+    <Compile Include="models\db\mtables\MTIkkatsuSyori.cs" />
+    <Compile Include="models\db\mtables\MTJigyouKatsudouSyuushiKoumoku.cs" />
+    <Compile Include="models\db\mtables\MTKaikeiTanni.cs" />
+    <Compile Include="models\db\mtables\MTKamoku.cs" />
+    <Compile Include="models\db\mtables\MTKanrisya.cs" />
+    <Compile Include="models\db\mtables\MTKeijouHouhou.cs" />
+    <Compile Include="models\db\mtables\MTKoteiShisan.cs" />
+    <Compile Include="models\db\mtables\MTResist.cs" />
+    <Compile Include="models\db\mtables\MTSetting.cs" />
+    <Compile Include="models\db\mtables\MTShikinSyuushiKoumoku.cs" />
+    <Compile Include="models\db\mtables\MTSyoukyakuHouhou.cs" />
+    <Compile Include="models\db\mtables\MTSyoukyakuKahi.cs" />
+    <Compile Include="models\db\mtables\MTSyoukyakuKubun.cs" />
+    <Compile Include="models\db\mtables\MTTaisyakuTaisyouKoumoku.cs" />
+    <Compile Include="models\db\mtables\MTTaiyouNennsuu.cs" />
+    <Compile Include="models\db\mtables\MTTekiyou.cs" />
+    <Compile Include="models\db\mtables\MTTorihikiKubun.cs" />
+    <Compile Include="models\db\mtables\MTYosanKubun.cs" />
+    <Compile Include="models\db\mtables\MTZoukaJiyuu.cs" />
+    <Compile Include="models\db\mtables\MTKaikeiKubun.cs" />
+    <Compile Include="models\db\mtables\MTKanjouKamoku.cs" />
+    <Compile Include="models\db\mtables\MTKamokuKubun.cs" />
+    <Compile Include="models\db\mtables\MTTaisyakuKubun.cs" />
+    <Compile Include="models\db\Row.cs" />
+    <Compile Include="models\db\tables\GenkaSyoukyakuMeisai.cs" />
+    <Compile Include="models\db\tables\KaikeiDenpyouMeisai.cs" />
+    <Compile Include="models\db\tables\TaisyakuTaisyouhyouKyakutyuu.cs" />
+    <Compile Include="models\db\tables\TaisyakuTaisyouhyouTyuuki.cs" />
+    <Compile Include="models\db\tables\TaisyakuTaisyouhyouTyuuki1.cs" />
+    <Compile Include="models\db\tables\TaisyakuTaisyouhyouTyuuki3.cs" />
+    <Compile Include="models\db\tables\TaisyakuTaisyouhyouTyuuki4.cs" />
+    <Compile Include="models\db\tables\TaisyakuTaisyouhyouTyuuki5.cs" />
+    <Compile Include="models\db\tables\YosanDaikubun.cs" />
+    <Compile Include="models\db\tables\YosanHojokamoku.cs" />
+    <Compile Include="models\db\tables\YosanKamoku.cs" />
+    <Compile Include="models\db\tables\YosanYobihi.cs" />
+    <Compile Include="models\db\tables\ZenkiKurikoshiHojoKamoku.cs" />
+    <Compile Include="models\db\tables\ZenkiKurikoshiKamoku.cs" />
+    <Compile Include="models\db\tables\YosanKamokuKubun.cs" />
+    <Compile Include="models\db\tables\ZenkiKurikoshiKamokuKubun.cs" />
+    <Compile Include="models\db\tables\Tyuuki.cs" />
+    <Compile Include="models\db\tables\Tyuuki8.cs" />
+    <Compile Include="models\db\mtables\MTTanpoKubun.cs" />
+    <Compile Include="models\db\tables\Tyuuki10.cs" />
+    <Compile Include="models\db\tables\Tyuuki11.cs" />
+    <Compile Include="models\db\vtables\UsableYosanDaikubun.cs" />
+    <Compile Include="models\db\vtables\UsableYosanHojoKamoku.cs" />
+    <Compile Include="models\db\vtables\UsableYosanKamoku.cs" />
+    <Compile Include="models\db\vtables\YosanList.cs" />
+    <Compile Include="models\db\vtables\BufferedMTKanjouKamoku.cs" />
+    <Compile Include="models\db\vtables\BufferedYosanKamokuKubun.cs" />
+    <Compile Include="models\db\vtables\BufferedZenkiKurikoshiKamokuKubun.cs" />
+    <Compile Include="models\KoteiShisanFunc.cs" />
+    <Compile Include="models\query\BalanceSheet.cs" />
+    <Compile Include="models\query\GoukeiZandakaShisanhyou.cs" />
+    <Compile Include="models\query\HoseiYosan.cs" />
+    <Compile Include="models\query\KanjouKamokuList.cs" />
+    <Compile Include="models\query\KanjouMototyou.cs" />
+    <Compile Include="models\query\JigyouKatsudou.cs" />
+    <Compile Include="models\query\ShikinSyuushi.cs" />
+    <Compile Include="models\query\YosanJisseki.cs" />
+    <Compile Include="models\query\YosanTable.cs" />
+    <Compile Include="models\query\KoteiShisanMeisai.cs" />
+    <Compile Include="models\query\ShiwakeDenpyou.cs" />
+    <Compile Include="models\query\YosanUchiwake.cs" />
+    <Compile Include="models\query\ShikinSyuushiUchiwake.cs" />
+    <Compile Include="models\query\JigyouKatsudouUchiwake.cs" />
+    <Compile Include="models\query\BalanceSheetTyuuki.cs" />
+    <Compile Include="models\query\TekiyouList.cs" />
+    <Compile Include="models\query\KamokuKubunSummary.cs" />
+    <Compile Include="models\query\HikiatekinMeisai.cs" />
+    <Compile Include="models\query\Tyuuki.cs" />
+    <Compile Include="models\Validator.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="views\BalanceSheetCommentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\BalanceSheetCommentForm.Designer.cs">
+      <DependentUpon>BalanceSheetCommentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\BalanceSheetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\BalanceSheetForm.Designer.cs">
+      <DependentUpon>BalanceSheetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\controls\AmountTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\controls\AmountTextBox.Designer.cs">
+      <DependentUpon>AmountTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\controls\AutoSizeLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\controls\AutoSizeLabel.Designer.cs">
+      <DependentUpon>AutoSizeLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\controls\DateInputPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\controls\DateInputPanel.Designer.cs">
+      <DependentUpon>DateInputPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\controls\FormattedViewTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\controls\FormattedViewTextBox.Designer.cs">
+      <DependentUpon>FormattedViewTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\controls\KeySelectorTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\controls\KeySelectorTextBox.Designer.cs">
+      <DependentUpon>KeySelectorTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\controls\MTComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\controls\MTComboBox.Designer.cs">
+      <DependentUpon>MTComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\controls\MultiColumnComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\controls\MultiColumnComboBox.Designer.cs">
+      <DependentUpon>MultiColumnComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\controls\NullableDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\controls\YomiTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\DaikubunForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\DaikubunForm.Designer.cs">
+      <DependentUpon>DaikubunForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\AbstractDBGridRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\AbstractDBGridRow.Designer.cs">
+      <DependentUpon>AbstractDBGridRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\AbstractPanelGridRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\AbstractPanelGridRow.Designer.cs">
+      <DependentUpon>AbstractPanelGridRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\BSCGenkaGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\BSCGenkaGrid.Designer.cs">
+      <DependentUpon>BSCGenkaGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\BSCGenkaRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\BSCGenkaRow.Designer.cs">
+      <DependentUpon>BSCGenkaRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\BSCKaikeiHoushinGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\BSCKaikeiHoushinGrid.Designer.cs">
+      <DependentUpon>BSCKaikeiHoushinGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\BSCKaikeiHoushinRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\BSCKaikeiHoushinRow.Designer.cs">
+      <DependentUpon>BSCKaikeiHoushinRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\BSCTanpoGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\BSCTanpoGrid.Designer.cs">
+      <DependentUpon>BSCTanpoGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\BSCTanpoRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\BSCTanpoRow.Designer.cs">
+      <DependentUpon>BSCTanpoRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\BSCTorikuzushiGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\BSCTorikuzushiGrid.Designer.cs">
+      <DependentUpon>BSCTorikuzushiGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\BSCTorikuzushiRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\BSCTorikuzushiRow.Designer.cs">
+      <DependentUpon>BSCTorikuzushiRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\BSCZaisanGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\BSCZaisanGrid.Designer.cs">
+      <DependentUpon>BSCZaisanGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\BSCZaisanRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\BSCZaisanRow.Designer.cs">
+      <DependentUpon>BSCZaisanRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\DaikubunGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\DaikubunGrid.Designer.cs">
+      <DependentUpon>DaikubunGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\DaikubunRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\DaikubunRow.Designer.cs">
+      <DependentUpon>DaikubunRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\GridPager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\GridPager.Designer.cs">
+      <DependentUpon>GridPager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\HoujinDangaiRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\HoujinDangaiRow.Designer.cs">
+      <DependentUpon>HoujinDangaiRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\HoujinShisetsuGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\HoujinShisetsuGrid.Designer.cs">
+      <DependentUpon>HoujinShisetsuGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\HoujinShisetsuRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\HoujinShisetsuRow.Designer.cs">
+      <DependentUpon>HoujinShisetsuRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\IkkatsuSyoriGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\IkkatsuSyoriGrid.Designer.cs">
+      <DependentUpon>IkkatsuSyoriGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\IkkatsuSyoriMasterGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\IkkatsuSyoriMasterGrid.Designer.cs">
+      <DependentUpon>IkkatsuSyoriMasterGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\IkkatsuSyoriMasterRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\IkkatsuSyoriMasterRow.designer.cs">
+      <DependentUpon>IkkatsuSyoriMasterRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\IkkatsuSyoriRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\IkkatsuSyoriRow.Designer.cs">
+      <DependentUpon>IkkatsuSyoriRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\KaikeiDenpyouGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\KaikeiDenpyouGrid.Designer.cs">
+      <DependentUpon>KaikeiDenpyouGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\KaikeiDenpyouRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\KaikeiDenpyouRow.Designer.cs">
+      <DependentUpon>KaikeiDenpyouRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\KaikeiTanniGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\KaikeiTanniGrid.Designer.cs">
+      <DependentUpon>KaikeiTanniGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\KaikeiTanniRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\KaikeiTanniRow.Designer.cs">
+      <DependentUpon>KaikeiTanniRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\KoteiShisanDetailMainRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\KoteiShisanDetailMainRow.Designer.cs">
+      <DependentUpon>KoteiShisanDetailMainRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\KoteiShisanDetailSubRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\KoteiShisanDetailSubRow.Designer.cs">
+      <DependentUpon>KoteiShisanDetailSubRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\KoteiShisanGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\KoteiShisanGrid.Designer.cs">
+      <DependentUpon>KoteiShisanGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\KoteiShisanRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\KoteiShisanRow.Designer.cs">
+      <DependentUpon>KoteiShisanRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\PanelGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\PanelGrid.Designer.cs">
+      <DependentUpon>PanelGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\SyoukyakuMeisaiGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\SyoukyakuMeisaiGrid.Designer.cs">
+      <DependentUpon>SyoukyakuMeisaiGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\SyoukyakuMeisaiRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\SyoukyakuMeisaiRow.Designer.cs">
+      <DependentUpon>SyoukyakuMeisaiRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\SyuushiKakuninGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\SyuushiKakuninGrid.Designer.cs">
+      <DependentUpon>SyuushiKakuninGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\SyuushiKakuninRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\SyuushiKakuninRow.Designer.cs">
+      <DependentUpon>SyuushiKakuninRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\TekiyouGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\TekiyouGrid.Designer.cs">
+      <DependentUpon>TekiyouGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\TekiyouRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\TekiyouRow.Designer.cs">
+      <DependentUpon>TekiyouRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\TorihikiKubunGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\TorihikiKubunGrid.Designer.cs">
+      <DependentUpon>TorihikiKubunGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\TorihikiKubunRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\TorihikiKubunRow.Designer.cs">
+      <DependentUpon>TorihikiKubunRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\YosanDaikubunGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\YosanDaikubunGrid.Designer.cs">
+      <DependentUpon>YosanDaikubunGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\YosanDaikubunRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\YosanDaikubunRow.Designer.cs">
+      <DependentUpon>YosanDaikubunRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\YosanHojoKakuninGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\YosanHojoKakuninGrid.Designer.cs">
+      <DependentUpon>YosanHojoKakuninGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\YosanHojoKakuninRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\YosanHojoKakuninRow.Designer.cs">
+      <DependentUpon>YosanHojoKakuninRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\YosanHojoKamokuGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\YosanHojoKamokuGrid.Designer.cs">
+      <DependentUpon>YosanHojoKamokuGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\YosanHojoKamokuRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\YosanHojoKamokuRow.Designer.cs">
+      <DependentUpon>YosanHojoKamokuRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\YosanKamokuGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\YosanKamokuGrid.Designer.cs">
+      <DependentUpon>YosanKamokuGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\YosanKamokuKakuninGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\YosanKamokuKakuninGrid.Designer.cs">
+      <DependentUpon>YosanKamokuKakuninGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\YosanKamokuKakuninRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\YosanKamokuKakuninRow.Designer.cs">
+      <DependentUpon>YosanKamokuKakuninRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\YosanKamokuRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\YosanKamokuRow.Designer.cs">
+      <DependentUpon>YosanKamokuRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\YosanListGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\YosanListGrid.Designer.cs">
+      <DependentUpon>YosanListGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\YosanListRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\YosanListRow.Designer.cs">
+      <DependentUpon>YosanListRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\YosanYobihiKakuninGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\YosanYobihiKakuninGrid.Designer.cs">
+      <DependentUpon>YosanYobihiKakuninGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\YosanYobihiKakuninRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\YosanYobihiKakuninRow.Designer.cs">
+      <DependentUpon>YosanYobihiKakuninRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\YosanYobihiRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\YosanYobihiRow.Designer.cs">
+      <DependentUpon>YosanYobihiRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\YosanKamokuKubunRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\YosanKamokuKubunRow.Designer.cs">
+      <DependentUpon>YosanKamokuKubunRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\YosanKamokuKubunGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\YosanKamokuKubunGrid.Designer.cs">
+      <DependentUpon>YosanKamokuKubunGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\YosanKamokuDaikubunRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\YosanKamokuDaikubunRow.Designer.cs">
+      <DependentUpon>YosanKamokuDaikubunRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\YosanKamokuDaikubunGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\YosanKamokuDaikubunGrid.Designer.cs">
+      <DependentUpon>YosanKamokuDaikubunGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\KanjouKamokuRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\KanjouKamokuRow.Designer.cs">
+      <DependentUpon>KanjouKamokuRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\KanjouKamokuGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\KanjouKamokuGrid.Designer.cs">
+      <DependentUpon>KanjouKamokuGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\HojoKamokuRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\HojoKamokuRow.Designer.cs">
+      <DependentUpon>HojoKamokuRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\HojoKamokuGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\HojoKamokuGrid.Designer.cs">
+      <DependentUpon>HojoKamokuGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\KanjouKamokuDetailRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\KanjouKamokuDetailRow.Designer.cs">
+      <DependentUpon>KanjouKamokuDetailRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\ZenkiKurikoshiKamokuKubunRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\ZenkiKurikoshiKamokuKubunRow.Designer.cs">
+      <DependentUpon>ZenkiKurikoshiKamokuKubunRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\ZenkiKurikoshiKamokuKubunGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\ZenkiKurikoshiKamokuKubunGrid.Designer.cs">
+      <DependentUpon>ZenkiKurikoshiKamokuKubunGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\Tyuuki8Row.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\Tyuuki8Row.Designer.cs">
+      <DependentUpon>Tyuuki8Row.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\Tyuuki8Grid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\Tyuuki8Grid.Designer.cs">
+      <DependentUpon>Tyuuki8Grid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\Tyuuki10Row.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\Tyuuki10Row.Designer.cs">
+      <DependentUpon>Tyuuki10Row.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\Tyuuki10Grid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\Tyuuki10Grid.Designer.cs">
+      <DependentUpon>Tyuuki10Grid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\Tyuuki11Row.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\Tyuuki11Row.Designer.cs">
+      <DependentUpon>Tyuuki11Row.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\grid\Tyuuki11Grid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\grid\Tyuuki11Grid.Designer.cs">
+      <DependentUpon>Tyuuki11Grid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\HoujinShisetsuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\HoujinShisetsuForm.Designer.cs">
+      <DependentUpon>HoujinShisetsuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\IkkatsuSyoriMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\IkkatsuSyoriMasterForm.Designer.cs">
+      <DependentUpon>IkkatsuSyoriMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\JigyouSyuushiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\JigyouSyuushiForm.Designer.cs">
+      <DependentUpon>JigyouSyuushiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\KaikeiDenpyouForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\KaikeiDenpyouForm.Designer.cs">
+      <DependentUpon>KaikeiDenpyouForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\KaikeiTanniForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\KaikeiTanniForm.Designer.cs">
+      <DependentUpon>KaikeiTanniForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\KanjouMototyouForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\KanjouMototyouForm.Designer.cs">
+      <DependentUpon>KanjouMototyouForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\KoteiShisanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\KoteiShisanForm.Designer.cs">
+      <DependentUpon>KoteiShisanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\KurikoshiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\KurikoshiForm.Designer.cs">
+      <DependentUpon>KurikoshiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\DenpyouBangouSeiriPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\popup\DenpyouBangouSeiriPopup.Designer.cs">
+      <DependentUpon>DenpyouBangouSeiriPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\DenpyouInfoPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\popup\DenpyouInfoPopup.Designer.cs">
+      <DependentUpon>DenpyouInfoPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\HojoKamokuPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\popup\HojoKamokuPopup.Designer.cs">
+      <DependentUpon>HojoKamokuPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\IkkatsuTourokuPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\popup\IkkatsuTourokuPopup.Designer.cs">
+      <DependentUpon>IkkatsuTourokuPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\IMTGridPopup.cs" />
+    <Compile Include="views\popup\KamokuPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\popup\KamokuPopup.Designer.cs">
+      <DependentUpon>KamokuPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\KoteiShisanDetailPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\popup\KoteiShisanDetailPopup.Designer.cs">
+      <DependentUpon>KoteiShisanDetailPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\ReportPreviewPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\popup\ReportPreviewPopup.Designer.cs">
+      <DependentUpon>ReportPreviewPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\SubfunctionPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\popup\SubfunctionPopup.Designer.cs">
+      <DependentUpon>SubfunctionPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\TekiyouPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\popup\TekiyouPopup.Designer.cs">
+      <DependentUpon>TekiyouPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\YosanDaikubunPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\popup\YosanDaikubunPopup.Designer.cs">
+      <DependentUpon>YosanDaikubunPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\YosanHojoKamokuPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\popup\YosanHojoKamokuPopup.Designer.cs">
+      <DependentUpon>YosanHojoKamokuPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\YosanKakuninPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\popup\YosanKakuninPopup.Designer.cs">
+      <DependentUpon>YosanKakuninPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\YosanKamokuPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\popup\YosanKamokuPopup.Designer.cs">
+      <DependentUpon>YosanKamokuPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\YosanListPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\popup\YosanListPopup.Designer.cs">
+      <DependentUpon>YosanListPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\YosanYobihiKakuninPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\popup\YosanYobihiKakuninPopup.Designer.cs">
+      <DependentUpon>YosanYobihiKakuninPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\YosanYobihiPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\popup\YosanYobihiPopup.Designer.cs">
+      <DependentUpon>YosanYobihiPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\YosanKamokuKubunPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\popup\YosanKamokuKubunPopup.Designer.cs">
+      <DependentUpon>YosanKamokuKubunPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\YosanKamokuDaikubunPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\popup\YosanKamokuDaikubunPopup.Designer.cs">
+      <DependentUpon>YosanKamokuDaikubunPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\KanjouKamokuDetailPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\popup\KanjouKamokuDetailPopup.Designer.cs">
+      <DependentUpon>KanjouKamokuDetailPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\controls\SelectKanjouKamokuDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\controls\SelectKanjouKamokuDialog.Designer.cs">
+      <DependentUpon>SelectKanjouKamokuDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\KanjouMototyouPrintPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\popup\KanjouMototyouPrintPopup.Designer.cs">
+      <DependentUpon>KanjouMototyouPrintPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\PrintMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\PrintMainForm.Designer.cs">
+      <DependentUpon>PrintMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\BalanceSheet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\BalanceSheet.Designer.cs">
+      <DependentUpon>BalanceSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\BalanceSheetSub2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\BalanceSheetSub2.Designer.cs">
+      <DependentUpon>BalanceSheetSub2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\BalanceSheetSub1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\BalanceSheetSub1.Designer.cs">
+      <DependentUpon>BalanceSheetSub1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\BalanceSheetSub2Junshisan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\BalanceSheetSub2Junshisan.Designer.cs">
+      <DependentUpon>BalanceSheetSub2Junshisan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\BalanceSheetSubHusaiJunshisan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\BalanceSheetSubHusaiJunshisan.Designer.cs">
+      <DependentUpon>BalanceSheetSubHusaiJunshisan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\BalanceSheetTyuuki1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\BalanceSheetTyuuki1.Designer.cs">
+      <DependentUpon>BalanceSheetTyuuki1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\BalanceSheetTyuuki3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\BalanceSheetTyuuki3.Designer.cs">
+      <DependentUpon>BalanceSheetTyuuki3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\BalanceSheetTyuuki4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\BalanceSheetTyuuki4.Designer.cs">
+      <DependentUpon>BalanceSheetTyuuki4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\BalanceSheetTyuuki5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\BalanceSheetTyuuki5.Designer.cs">
+      <DependentUpon>BalanceSheetTyuuki5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\GoukeiZandakaShisanhyou.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\GoukeiZandakaShisanhyou.Designer.cs">
+      <DependentUpon>GoukeiZandakaShisanhyou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\HojoMototyou.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\HojoMototyou.Designer.cs">
+      <DependentUpon>HojoMototyou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\JigyouKatsudouSyuushiKeisansyo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\JigyouKatsudouSyuushiKeisansyo.Designer.cs">
+      <DependentUpon>JigyouKatsudouSyuushiKeisansyo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\JigyouSyuushiUchiwake5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\JigyouSyuushiUchiwake5.Designer.cs">
+      <DependentUpon>JigyouSyuushiUchiwake5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\JigyouSyuushiUchiwake7.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\JigyouSyuushiUchiwake7.Designer.cs">
+      <DependentUpon>JigyouSyuushiUchiwake7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\JigyouSyuushiUchiwakeEngine.cs" />
+    <Compile Include="views\reports\KanjouKamokuReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\KanjouKamokuReport.Designer.cs">
+      <DependentUpon>KanjouKamokuReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\KanjouKamokuReportChukubunRow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\KanjouKamokuReportChukubunRow.Designer.cs">
+      <DependentUpon>KanjouKamokuReportChukubunRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\KanjouKamokuReportHojokamokuRow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\KanjouKamokuReportHojokamokuRow.Designer.cs">
+      <DependentUpon>KanjouKamokuReportHojokamokuRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\KanjouMototyou.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\KanjouMototyou.Designer.cs">
+      <DependentUpon>KanjouMototyou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\KanjouMototyou2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\KanjouMototyou2.Designer.cs">
+      <DependentUpon>KanjouMototyou2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\KessanHoukokusyoHyoushi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\KessanHoukokusyoHyoushi.Designer.cs">
+      <DependentUpon>KessanHoukokusyoHyoushi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\KoteiShisanMeisaisyo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\KoteiShisanMeisaisyo.Designer.cs">
+      <DependentUpon>KoteiShisanMeisaisyo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\ShikinSyuushiKeisansyo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\ShikinSyuushiKeisansyo.Designer.cs">
+      <DependentUpon>ShikinSyuushiKeisansyo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\ShikinSyuushiKeisansyoHosei3Kai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\ShikinSyuushiKeisansyoHosei3Kai.Designer.cs">
+      <DependentUpon>ShikinSyuushiKeisansyoHosei3Kai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\ShikinSyuushiKessanUchiwakeCol7.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\ShikinSyuushiKessanUchiwakeCol7.Designer.cs">
+      <DependentUpon>ShikinSyuushiKessanUchiwakeCol7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\ShikinSyuushiKessanUchiwakeCol5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\ShikinSyuushiKessanUchiwakeCol5.Designer.cs">
+      <DependentUpon>ShikinSyuushiKessanUchiwakeCol5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\ShikinSyuushiKessanUchiwakeEngine.cs" />
+    <Compile Include="views\reports\ShiwakeDenpyouB5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\ShiwakeDenpyouB5.Designer.cs">
+      <DependentUpon>ShiwakeDenpyouB5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\ShiwakeNikkityou.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\ShiwakeNikkityou.Designer.cs">
+      <DependentUpon>ShiwakeNikkityou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\SyuushiYosanJissekiReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\SyuushiYosanJissekiReport.Designer.cs">
+      <DependentUpon>SyuushiYosanJissekiReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\SyuushiYosanJissekiReport2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\SyuushiYosanJissekiReport2.Designer.cs">
+      <DependentUpon>SyuushiYosanJissekiReport2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\SyuushiYosanJissekiReport3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\SyuushiYosanJissekiReport3.Designer.cs">
+      <DependentUpon>SyuushiYosanJissekiReport3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\SyuushiYosanReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\SyuushiYosanReport.Designer.cs">
+      <DependentUpon>SyuushiYosanReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\SyuushiYosanUchiwakeReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\SyuushiYosanUchiwakeReport.Designer.cs">
+      <DependentUpon>SyuushiYosanUchiwakeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\BACKUPShiwakeDenpyouB5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\BACKUPShiwakeDenpyouB5.Designer.cs">
+      <DependentUpon>BACKUPShiwakeDenpyouB5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\ShiwakeDenpyouA4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\ShiwakeDenpyouA4.Designer.cs">
+      <DependentUpon>ShiwakeDenpyouA4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\TekiyouReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\TekiyouReport.Designer.cs">
+      <DependentUpon>TekiyouReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\YosanJissekiReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\YosanJissekiReport.Designer.cs">
+      <DependentUpon>YosanJissekiReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\ShikinSyuushiKessanUchiwakeCol10.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\ShikinSyuushiKessanUchiwakeCol10.Designer.cs">
+      <DependentUpon>ShikinSyuushiKessanUchiwakeCol10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\KanjouKamokuReportSyoukubunRow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\KanjouKamokuReportSyoukubunRow.Designer.cs">
+      <DependentUpon>KanjouKamokuReportSyoukubunRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\BalanceSheetUchiwakeCol5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\BalanceSheetUchiwakeCol5.Designer.cs">
+      <DependentUpon>BalanceSheetUchiwakeCol5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\HikiatekinMeisaiReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\HikiatekinMeisaiReport.Designer.cs">
+      <DependentUpon>HikiatekinMeisaiReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\TyuukiReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\TyuukiReport.Designer.cs">
+      <DependentUpon>TyuukiReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\TyuukiSubReportText.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\TyuukiSubReportText.Designer.cs">
+      <DependentUpon>TyuukiSubReportText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\TyuukiSubReportKoteiShisan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\TyuukiSubReportKoteiShisan.Designer.cs">
+      <DependentUpon>TyuukiSubReportKoteiShisan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\TyuukiSubReportTanpo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\TyuukiSubReportTanpo.Designer.cs">
+      <DependentUpon>TyuukiSubReportTanpo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\TyuukiSubReportShisan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\TyuukiSubReportShisan.Designer.cs">
+      <DependentUpon>TyuukiSubReportShisan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\TyuukiSubReportSaiken.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\TyuukiSubReportSaiken.Designer.cs">
+      <DependentUpon>TyuukiSubReportSaiken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reports\TyuukiSubReportMankiSaiken.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\reports\TyuukiSubReportMankiSaiken.Designer.cs">
+      <DependentUpon>TyuukiSubReportMankiSaiken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\SikinSyuushiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\SikinSyuushiForm.Designer.cs">
+      <DependentUpon>SikinSyuushiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\SyuushiKakuninForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\SyuushiKakuninForm.Designer.cs">
+      <DependentUpon>SyuushiKakuninForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\TekiyouForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\TekiyouForm.Designer.cs">
+      <DependentUpon>TekiyouForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\TorihikiKubunForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\TorihikiKubunForm.Designer.cs">
+      <DependentUpon>TorihikiKubunForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\YosanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\YosanForm.Designer.cs">
+      <DependentUpon>YosanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\YosanJissekiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\YosanJissekiForm.Designer.cs">
+      <DependentUpon>YosanJissekiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\PrintYosanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\PrintYosanForm.Designer.cs">
+      <DependentUpon>PrintYosanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\KanjouKamokuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\KanjouKamokuForm.Designer.cs">
+      <DependentUpon>KanjouKamokuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\RootMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\RootMenuForm.Designer.cs">
+      <DependentUpon>RootMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\TyuukiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\TyuukiForm.Designer.cs">
+      <DependentUpon>TyuukiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\KurikoshiSyoriForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\KurikoshiSyoriForm.Designer.cs">
+      <DependentUpon>KurikoshiSyoriForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\BalanceSheetCommentForm.resx">
+      <DependentUpon>BalanceSheetCommentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\BalanceSheetForm.resx">
+      <DependentUpon>BalanceSheetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\controls\AutoSizeLabel.resx">
+      <DependentUpon>AutoSizeLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\controls\DateInputPanel.resx">
+      <DependentUpon>DateInputPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\controls\MultiColumnComboBox.resx">
+      <DependentUpon>MultiColumnComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\DaikubunForm.resx">
+      <DependentUpon>DaikubunForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\BSCGenkaRow.resx">
+      <DependentUpon>BSCGenkaRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\BSCKaikeiHoushinRow.resx">
+      <DependentUpon>BSCKaikeiHoushinRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\BSCTanpoRow.resx">
+      <DependentUpon>BSCTanpoRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\BSCTorikuzushiRow.resx">
+      <DependentUpon>BSCTorikuzushiRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\BSCZaisanRow.resx">
+      <DependentUpon>BSCZaisanRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\DaikubunRow.resx">
+      <DependentUpon>DaikubunRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\GridPager.resx">
+      <DependentUpon>GridPager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\HoujinDangaiRow.resx">
+      <DependentUpon>HoujinDangaiRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\HoujinShisetsuRow.resx">
+      <DependentUpon>HoujinShisetsuRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\IkkatsuSyoriMasterRow.resx">
+      <DependentUpon>IkkatsuSyoriMasterRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\IkkatsuSyoriRow.resx">
+      <DependentUpon>IkkatsuSyoriRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\KaikeiDenpyouRow.resx">
+      <DependentUpon>KaikeiDenpyouRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\KaikeiTanniRow.resx">
+      <DependentUpon>KaikeiTanniRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\KoteiShisanDetailMainRow.resx">
+      <DependentUpon>KoteiShisanDetailMainRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\KoteiShisanDetailSubRow.resx">
+      <DependentUpon>KoteiShisanDetailSubRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\KoteiShisanRow.resx">
+      <DependentUpon>KoteiShisanRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\PanelGrid.resx">
+      <DependentUpon>PanelGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\SyoukyakuMeisaiRow.resx">
+      <DependentUpon>SyoukyakuMeisaiRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\SyuushiKakuninRow.resx">
+      <DependentUpon>SyuushiKakuninRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\TekiyouRow.resx">
+      <DependentUpon>TekiyouRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\TorihikiKubunRow.resx">
+      <DependentUpon>TorihikiKubunRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\YosanDaikubunGrid.resx">
+      <DependentUpon>YosanDaikubunGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\YosanDaikubunRow.resx">
+      <DependentUpon>YosanDaikubunRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\YosanHojoKakuninRow.resx">
+      <DependentUpon>YosanHojoKakuninRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\YosanHojoKamokuRow.resx">
+      <DependentUpon>YosanHojoKamokuRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\YosanKamokuKakuninRow.resx">
+      <DependentUpon>YosanKamokuKakuninRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\YosanKamokuRow.resx">
+      <DependentUpon>YosanKamokuRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\YosanListRow.resx">
+      <DependentUpon>YosanListRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\YosanYobihiKakuninRow.resx">
+      <DependentUpon>YosanYobihiKakuninRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\YosanYobihiRow.resx">
+      <DependentUpon>YosanYobihiRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\YosanKamokuKubunRow.resx">
+      <DependentUpon>YosanKamokuKubunRow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\YosanKamokuDaikubunRow.resx">
+      <DependentUpon>YosanKamokuDaikubunRow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\KanjouKamokuRow.resx">
+      <DependentUpon>KanjouKamokuRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\HojoKamokuRow.resx">
+      <DependentUpon>HojoKamokuRow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\KanjouKamokuDetailRow.resx">
+      <DependentUpon>KanjouKamokuDetailRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\ZenkiKurikoshiKamokuKubunRow.resx">
+      <DependentUpon>ZenkiKurikoshiKamokuKubunRow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\Tyuuki8Row.resx">
+      <DependentUpon>Tyuuki8Row.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\Tyuuki10Row.resx">
+      <DependentUpon>Tyuuki10Row.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\grid\Tyuuki11Row.resx">
+      <DependentUpon>Tyuuki11Row.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\HoujinShisetsuForm.resx">
+      <DependentUpon>HoujinShisetsuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\IkkatsuSyoriMasterForm.resx">
+      <DependentUpon>IkkatsuSyoriMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\JigyouSyuushiForm.resx">
+      <DependentUpon>JigyouSyuushiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\KaikeiDenpyouForm.resx">
+      <DependentUpon>KaikeiDenpyouForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\KaikeiTanniForm.resx">
+      <DependentUpon>KaikeiTanniForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\KanjouMototyouForm.resx">
+      <DependentUpon>KanjouMototyouForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\KoteiShisanForm.resx">
+      <DependentUpon>KoteiShisanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\KurikoshiForm.resx">
+      <DependentUpon>KurikoshiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\popup\DenpyouBangouSeiriPopup.resx">
+      <DependentUpon>DenpyouBangouSeiriPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\popup\DenpyouInfoPopup.resx">
+      <DependentUpon>DenpyouInfoPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\popup\HojoKamokuPopup.resx">
+      <DependentUpon>HojoKamokuPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\popup\IkkatsuTourokuPopup.resx">
+      <DependentUpon>IkkatsuTourokuPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\popup\KamokuPopup.resx">
+      <DependentUpon>KamokuPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\popup\KoteiShisanDetailPopup.resx">
+      <DependentUpon>KoteiShisanDetailPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\popup\ReportPreviewPopup.resx">
+      <DependentUpon>ReportPreviewPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\popup\SubfunctionPopup.resx">
+      <DependentUpon>SubfunctionPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\popup\TekiyouPopup.resx">
+      <DependentUpon>TekiyouPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\popup\YosanDaikubunPopup.resx">
+      <DependentUpon>YosanDaikubunPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\popup\YosanHojoKamokuPopup.resx">
+      <DependentUpon>YosanHojoKamokuPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\popup\YosanKakuninPopup.resx">
+      <DependentUpon>YosanKakuninPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\popup\YosanKamokuPopup.resx">
+      <DependentUpon>YosanKamokuPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\popup\YosanListPopup.resx">
+      <DependentUpon>YosanListPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\popup\YosanYobihiKakuninPopup.resx">
+      <DependentUpon>YosanYobihiKakuninPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\popup\YosanYobihiPopup.resx">
+      <DependentUpon>YosanYobihiPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\popup\YosanKamokuKubunPopup.resx">
+      <DependentUpon>YosanKamokuKubunPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\popup\YosanKamokuDaikubunPopup.resx">
+      <DependentUpon>YosanKamokuDaikubunPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\popup\KanjouKamokuDetailPopup.resx">
+      <DependentUpon>KanjouKamokuDetailPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\controls\SelectKanjouKamokuDialog.resx">
+      <DependentUpon>SelectKanjouKamokuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\popup\KanjouMototyouPrintPopup.resx">
+      <DependentUpon>KanjouMototyouPrintPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\PrintMainForm.resx">
+      <DependentUpon>PrintMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\BalanceSheet.resx">
+      <DependentUpon>BalanceSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\BalanceSheetSub1.resx">
+      <DependentUpon>BalanceSheetSub1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\BalanceSheetSub2.resx">
+      <DependentUpon>BalanceSheetSub2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\BalanceSheetSub2Junshisan.resx">
+      <DependentUpon>BalanceSheetSub2Junshisan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\BalanceSheetSubHusaiJunshisan.resx">
+      <DependentUpon>BalanceSheetSubHusaiJunshisan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\BalanceSheetTyuuki1.resx">
+      <DependentUpon>BalanceSheetTyuuki1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\BalanceSheetTyuuki3.resx">
+      <DependentUpon>BalanceSheetTyuuki3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\BalanceSheetTyuuki4.resx">
+      <DependentUpon>BalanceSheetTyuuki4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\BalanceSheetTyuuki5.resx">
+      <DependentUpon>BalanceSheetTyuuki5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\GoukeiZandakaShisanhyou.resx">
+      <DependentUpon>GoukeiZandakaShisanhyou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\HojoMototyou.resx">
+      <DependentUpon>HojoMototyou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\JigyouKatsudouSyuushiKeisansyo.resx">
+      <DependentUpon>JigyouKatsudouSyuushiKeisansyo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\JigyouSyuushiUchiwake5.resx">
+      <DependentUpon>JigyouSyuushiUchiwake5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\JigyouSyuushiUchiwake7.resx">
+      <DependentUpon>JigyouSyuushiUchiwake7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\KanjouKamokuReport.resx">
+      <DependentUpon>KanjouKamokuReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\KanjouKamokuReportChukubunRow.resx">
+      <DependentUpon>KanjouKamokuReportChukubunRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\KanjouKamokuReportHojokamokuRow.resx">
+      <DependentUpon>KanjouKamokuReportHojokamokuRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\KanjouMototyou.resx">
+      <DependentUpon>KanjouMototyou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\KanjouMototyou2.resx">
+      <DependentUpon>KanjouMototyou2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\KessanHoukokusyoHyoushi.resx">
+      <DependentUpon>KessanHoukokusyoHyoushi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\KoteiShisanMeisaisyo.resx">
+      <DependentUpon>KoteiShisanMeisaisyo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\ShikinSyuushiKeisansyo.resx">
+      <DependentUpon>ShikinSyuushiKeisansyo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\ShikinSyuushiKeisansyoHosei3Kai.resx">
+      <DependentUpon>ShikinSyuushiKeisansyoHosei3Kai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\ShikinSyuushiKessanUchiwakeCol5.resx">
+      <DependentUpon>ShikinSyuushiKessanUchiwakeCol5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\ShikinSyuushiKessanUchiwakeCol7.resx">
+      <DependentUpon>ShikinSyuushiKessanUchiwakeCol7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\ShiwakeDenpyouB5.resx">
+      <DependentUpon>ShiwakeDenpyouB5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\ShiwakeNikkityou.resx">
+      <DependentUpon>ShiwakeNikkityou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\SyuushiYosanJissekiReport.resx">
+      <DependentUpon>SyuushiYosanJissekiReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\SyuushiYosanJissekiReport2.resx">
+      <DependentUpon>SyuushiYosanJissekiReport2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\SyuushiYosanJissekiReport3.resx">
+      <DependentUpon>SyuushiYosanJissekiReport3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\SyuushiYosanReport.resx">
+      <DependentUpon>SyuushiYosanReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\SyuushiYosanUchiwakeReport.resx">
+      <DependentUpon>SyuushiYosanUchiwakeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\BACKUPShiwakeDenpyouB5.resx">
+      <DependentUpon>BACKUPShiwakeDenpyouB5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\ShiwakeDenpyouA4.resx">
+      <DependentUpon>ShiwakeDenpyouA4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\TekiyouReport.resx">
+      <DependentUpon>TekiyouReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\YosanJissekiReport.resx">
+      <DependentUpon>YosanJissekiReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\ShikinSyuushiKessanUchiwakeCol10.resx">
+      <DependentUpon>ShikinSyuushiKessanUchiwakeCol10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\KanjouKamokuReportSyoukubunRow.resx">
+      <DependentUpon>KanjouKamokuReportSyoukubunRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\BalanceSheetUchiwakeCol5.resx">
+      <DependentUpon>BalanceSheetUchiwakeCol5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\HikiatekinMeisaiReport.resx">
+      <DependentUpon>HikiatekinMeisaiReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\TyuukiReport.resx">
+      <DependentUpon>TyuukiReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\TyuukiSubReportText.resx">
+      <DependentUpon>TyuukiSubReportText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\TyuukiSubReportKoteiShisan.resx">
+      <DependentUpon>TyuukiSubReportKoteiShisan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\TyuukiSubReportTanpo.resx">
+      <DependentUpon>TyuukiSubReportTanpo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\TyuukiSubReportShisan.resx">
+      <DependentUpon>TyuukiSubReportShisan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\TyuukiSubReportSaiken.resx">
+      <DependentUpon>TyuukiSubReportSaiken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reports\TyuukiSubReportMankiSaiken.resx">
+      <DependentUpon>TyuukiSubReportMankiSaiken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\SikinSyuushiForm.resx">
+      <DependentUpon>SikinSyuushiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\SyuushiKakuninForm.resx">
+      <DependentUpon>SyuushiKakuninForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\TekiyouForm.resx">
+      <DependentUpon>TekiyouForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\TorihikiKubunForm.resx">
+      <DependentUpon>TorihikiKubunForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\YosanForm.resx">
+      <DependentUpon>YosanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\YosanJissekiForm.resx">
+      <DependentUpon>YosanJissekiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\PrintYosanForm.resx">
+      <DependentUpon>PrintYosanForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\KanjouKamokuForm.resx">
+      <DependentUpon>KanjouKamokuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\RootMenuForm.resx">
+      <DependentUpon>RootMenuForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\TyuukiForm.resx">
+      <DependentUpon>TyuukiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\KurikoshiSyoriForm.resx">
+      <DependentUpon>KurikoshiSyoriForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 および x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows インストーラー 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down_right.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Archiver.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="publishDir" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\KaikeiSystem\publish</Value>
+    </Setting>
+    <Setting Name="dbFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">kaikei.db.ver1.original</Value>
+    </Setting>
+    <Setting Name="dbUpdateFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dbupdate.scr</Value>
+    </Setting>
+    <Setting Name="binFiles" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;KaikeiSystem.exe&lt;/string&gt;
+  &lt;string&gt;KaikeiSystemBody.exe&lt;/string&gt;
+  &lt;string&gt;LicenseClient.exe&lt;/string&gt;
+  &lt;string&gt;DatabaseUpdater.exe&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="binDir" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\KaikeiSystem\bin\Release</Value>
+    </Setting>
+    <Setting Name="dstDbFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">kaikei.db</Value>
+    </Setting>
+    <Setting Name="dbUpdater" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DatabaseUpdater.exe</Value>
+    </Setting>
+    <Setting Name="mainBin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">KaikeiSystemBody.exe</Value>
+    </Setting>
+    <Setting Name="archivePrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">KaikeiSystem_</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
