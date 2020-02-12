@@ -205,7 +205,7 @@ namespace KaikeiSystemBody.helper
                     case models.query.JigyouKatsudou.SummaryItem.TokubetsuShisyutsu:
                         return result + "(9)";
                     case models.query.JigyouKatsudou.SummaryItem.TokubetsuSagaku:
-                        return result + "(11)=(8)-(9)";
+                        return result + "(10)=(8)-(9)";
                 }
             }
 

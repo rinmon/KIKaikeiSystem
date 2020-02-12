@@ -1,0 +1,7 @@
+C:\Users\programing\Source\Repos\KIKaikeiSystem\KaikeiSystem\bin\Release\KaikeiSystem.exe.config
+C:\Users\programing\Source\Repos\KIKaikeiSystem\KaikeiSystem\bin\Release\KaikeiSystem.exe
+C:\Users\programing\Source\Repos\KIKaikeiSystem\KaikeiSystem\KaikeiSystem\obj\x86\Release\KaikeiSystem.csprojAssemblyReference.cache
+C:\Users\programing\Source\Repos\KIKaikeiSystem\KaikeiSystem\KaikeiSystem\obj\x86\Release\KaikeiSystem.Properties.Resources.resources
+C:\Users\programing\Source\Repos\KIKaikeiSystem\KaikeiSystem\KaikeiSystem\obj\x86\Release\KaikeiSystem.csproj.GenerateResource.cache
+C:\Users\programing\Source\Repos\KIKaikeiSystem\KaikeiSystem\KaikeiSystem\obj\x86\Release\KaikeiSystem.csproj.CopyComplete
+C:\Users\programing\Source\Repos\KIKaikeiSystem\KaikeiSystem\KaikeiSystem\obj\x86\Release\KaikeiSystem.exe
