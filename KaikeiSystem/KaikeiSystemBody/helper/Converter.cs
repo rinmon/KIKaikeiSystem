@@ -24,7 +24,7 @@ namespace KaikeiSystemBody.helper
 
         // 元号を表す文字かどうか
         public static bool IsGengouChar(char ch) {
-            if (ch == 'H' || ch == 'S' || ch == 'T' || ch == 'M') {
+            if (ch == 'R' || ch == 'H' || ch == 'S' || ch == 'T' || ch == 'M') {
                 return true;
             }
             else {
@@ -67,7 +67,7 @@ namespace KaikeiSystemBody.helper
         // DateTimeを和暦の文字列に変換
         public static string DateTimeToWarekiStr(DateTime date) {
             var buf = date.ToString("gyy/MM/dd ", JpCultureInfo);
-            buf = buf.Replace("平成", "H").Replace("昭和", "S").Replace("大正", "T").Replace("明治", "M");
+            buf = buf.Replace("令和", "R").Replace("平成", "H").Replace("昭和", "S").Replace("大正", "T").Replace("明治", "M");
             return buf;
         }
 
