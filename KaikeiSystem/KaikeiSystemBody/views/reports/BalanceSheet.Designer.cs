@@ -33,10 +33,11 @@
             this.txtDate = new DataDynamics.ActiveReports.TextBox();
             this.ラベル66 = new DataDynamics.ActiveReports.Label();
             this.ラベル19 = new DataDynamics.ActiveReports.Label();
+            this.labelYoushiki = new DataDynamics.ActiveReports.Label();
             this.detail = new DataDynamics.ActiveReports.Detail();
             this.subBalanceSheet = new DataDynamics.ActiveReports.SubReport();
             this.pageFooter = new DataDynamics.ActiveReports.PageFooter();
-            this.labelYoushiki = new DataDynamics.ActiveReports.Label();
+            this.ラベル5 = new DataDynamics.ActiveReports.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoujinmei)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.labelTitle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ラベル64)).BeginInit();
@@ -45,6 +46,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ラベル66)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ラベル19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.labelYoushiki)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ラベル5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // pageHeader
@@ -57,7 +59,8 @@
             this.txtDate,
             this.ラベル66,
             this.ラベル19,
-            this.labelYoushiki});
+            this.labelYoushiki,
+            this.ラベル5});
             this.pageHeader.Height = 0.4582677F;
             this.pageHeader.Name = "pageHeader";
             // 
@@ -171,6 +174,17 @@
             this.ラベル19.Top = 0.2395833F;
             this.ラベル19.Width = 0.2708333F;
             // 
+            // labelYoushiki
+            // 
+            this.labelYoushiki.Height = 0.2F;
+            this.labelYoushiki.HyperLink = null;
+            this.labelYoushiki.Left = 5.917F;
+            this.labelYoushiki.Name = "labelYoushiki";
+            this.labelYoushiki.Style = "";
+            this.labelYoushiki.Text = "";
+            this.labelYoushiki.Top = 0F;
+            this.labelYoushiki.Width = 1F;
+            // 
             // detail
             // 
             this.detail.ColumnSpacing = 0F;
@@ -200,16 +214,18 @@
             this.pageFooter.Height = 0F;
             this.pageFooter.Name = "pageFooter";
             // 
-            // labelYoushiki
+            // ラベル5
             // 
-            this.labelYoushiki.Height = 0.2F;
-            this.labelYoushiki.HyperLink = null;
-            this.labelYoushiki.Left = 5.917F;
-            this.labelYoushiki.Name = "labelYoushiki";
-            this.labelYoushiki.Style = "";
-            this.labelYoushiki.Text = "";
-            this.labelYoushiki.Top = 0F;
-            this.labelYoushiki.Width = 1F;
+            this.ラベル5.Height = 0.15625F;
+            this.ラベル5.HyperLink = "";
+            this.ラベル5.Left = 6.552001F;
+            this.ラベル5.Name = "ラベル5";
+            this.ラベル5.Style = "color: Black; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; text-align: left; ddo-cha" +
+    "r-set: 0";
+            this.ラベル5.Tag = "";
+            this.ラベル5.Text = "（単位：円）";
+            this.ラベル5.Top = 0.322F;
+            this.ラベル5.Width = 0.6145833F;
             // 
             // BalanceSheet
             // 
@@ -233,6 +249,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ラベル66)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ラベル19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.labelYoushiki)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ラベル5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -247,5 +264,6 @@
         private DataDynamics.ActiveReports.Label ラベル19;
         private DataDynamics.ActiveReports.SubReport subBalanceSheet;
         private DataDynamics.ActiveReports.Label labelYoushiki;
+        private DataDynamics.ActiveReports.Label ラベル5;
     }
 }

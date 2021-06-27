@@ -2,7 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\KaikeiSystem",
-    "\\KaikeiSystem\\KaikeiSystemBody"
+    "\\KaikeiSystem\\KaikeiSystemBody",
+    "\\KaikeiSystem\\KaikeiSystemBody\\models",
+    "\\KaikeiSystem\\KaikeiSystemBody\\models\\db",
+    "\\KaikeiSystem\\KaikeiSystemBody\\models\\query",
+    "\\KaikeiSystem\\KaikeiSystemBody\\Properties",
+    "\\KaikeiSystem\\KaikeiSystemBody\\views",
+    "\\KaikeiSystem\\KaikeiSystemBody\\views\\reports"
   ],
+  "SelectedNode": "\\KaikeiSystem\\KaikeiSystemBody\\models\\db\\AbstractDatabase.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -1,8 +1,7 @@
-C:\Users\programing\Source\Repos\KIKaikeiSystem\KaikeiSystem\bin\Release\LicenseClient.exe.config
-C:\Users\programing\Source\Repos\KIKaikeiSystem\KaikeiSystem\bin\Release\LicenseClient.exe
-C:\Users\programing\Source\Repos\KIKaikeiSystem\LicenseClient\LicenseClient\obj\x86\Release\LicenseClient.csprojAssemblyReference.cache
-C:\Users\programing\Source\Repos\KIKaikeiSystem\LicenseClient\LicenseClient\obj\x86\Release\LicenseClient.FormMain.resources
-C:\Users\programing\Source\Repos\KIKaikeiSystem\LicenseClient\LicenseClient\obj\x86\Release\LicenseClient.Properties.Resources.resources
-C:\Users\programing\Source\Repos\KIKaikeiSystem\LicenseClient\LicenseClient\obj\x86\Release\LicenseClient.csproj.GenerateResource.cache
-C:\Users\programing\Source\Repos\KIKaikeiSystem\LicenseClient\LicenseClient\obj\x86\Release\LicenseClient.csproj.CopyComplete
-C:\Users\programing\Source\Repos\KIKaikeiSystem\LicenseClient\LicenseClient\obj\x86\Release\LicenseClient.exe
+C:\Users\programing\source\repos\KIKaikeiSystem\KaikeiSystem\bin\Release\LicenseClient.exe.config
+C:\Users\programing\source\repos\KIKaikeiSystem\KaikeiSystem\bin\Release\LicenseClient.exe
+C:\Users\programing\source\repos\KIKaikeiSystem\LicenseClient\LicenseClient\obj\x86\Release\LicenseClient.FormMain.resources
+C:\Users\programing\source\repos\KIKaikeiSystem\LicenseClient\LicenseClient\obj\x86\Release\LicenseClient.Properties.Resources.resources
+C:\Users\programing\source\repos\KIKaikeiSystem\LicenseClient\LicenseClient\obj\x86\Release\LicenseClient.csproj.GenerateResource.cache
+C:\Users\programing\source\repos\KIKaikeiSystem\LicenseClient\LicenseClient\obj\x86\Release\LicenseClient.csproj.CopyComplete
+C:\Users\programing\source\repos\KIKaikeiSystem\LicenseClient\LicenseClient\obj\x86\Release\LicenseClient.exe

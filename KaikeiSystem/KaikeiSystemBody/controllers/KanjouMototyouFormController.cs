@@ -85,7 +85,7 @@ namespace KaikeiSystemBody.controllers
             mototyou = new models.query.KanjouMototyou(Context.KaikeiDatabase);
 
             form.SetDatabase(Context.KaikeiDatabase);
-            form.ClearControls(Context.Setting.GetStr("before_gengou", "H"));
+            form.ClearControls(Context.Setting.GetStr("before_gengou", "R"));
         }
 
         override protected void OnDeactivated() {

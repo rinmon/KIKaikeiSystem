@@ -81,6 +81,7 @@
             this.ラベル34 = new DataDynamics.ActiveReports.Label();
             this.ラベル40 = new DataDynamics.ActiveReports.Label();
             this.ラベル45 = new DataDynamics.ActiveReports.Label();
+            this.ラベル5 = new DataDynamics.ActiveReports.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ラベル0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ラベル103)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKaikeiKubun)).BeginInit();
@@ -130,6 +131,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ラベル34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ラベル40)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ラベル45)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ラベル5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // pageHeader
@@ -149,7 +151,8 @@
             this.ラベル4,
             this.ラベル3,
             this.ラベル2,
-            this.labelYoushiki});
+            this.labelYoushiki,
+            this.ラベル5});
             this.pageHeader.Height = 0.84375F;
             this.pageHeader.Name = "pageHeader";
             // 
@@ -1063,6 +1066,19 @@
             this.ラベル45.Top = 0F;
             this.ラベル45.Width = 1.660417F;
             // 
+            // ラベル5
+            // 
+            this.ラベル5.Height = 0.15625F;
+            this.ラベル5.HyperLink = "";
+            this.ラベル5.Left = 6.55F;
+            this.ラベル5.Name = "ラベル5";
+            this.ラベル5.Style = "color: Black; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; text-align: left; ddo-cha" +
+    "r-set: 0";
+            this.ラベル5.Tag = "";
+            this.ラベル5.Text = "（単位：円）";
+            this.ラベル5.Top = 0.52F;
+            this.ラベル5.Width = 0.6145833F;
+            // 
             // ShikinSyuushiKeisansyo
             // 
             this.MasterReport = false;
@@ -1130,6 +1146,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ラベル34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ラベル40)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ラベル45)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ラベル5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -1188,5 +1205,6 @@
         private DataDynamics.ActiveReports.TextBox txtIsSummaryRow;
         private DataDynamics.ActiveReports.TextBox txtKamokuKubunHierarchy;
         private DataDynamics.ActiveReports.Label labelYoushiki;
+        private DataDynamics.ActiveReports.Label ラベル5;
     }
 }

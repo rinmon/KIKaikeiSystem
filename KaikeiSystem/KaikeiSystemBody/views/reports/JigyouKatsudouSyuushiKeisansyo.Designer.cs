@@ -49,6 +49,7 @@
             this.txtKaikeiKubun = new DataDynamics.ActiveReports.TextBox();
             this.txtHoujinMei = new DataDynamics.ActiveReports.TextBox();
             this.txtKisanbi = new DataDynamics.ActiveReports.TextBox();
+            this.labelYoushiki = new DataDynamics.ActiveReports.Label();
             this.reportFooter1 = new DataDynamics.ActiveReports.ReportFooter();
             this.txtTsumitateTorikuzushiCol1 = new DataDynamics.ActiveReports.TextBox();
             this.ボックス86 = new DataDynamics.ActiveReports.Shape();
@@ -85,7 +86,7 @@
             this.txtKubunId = new DataDynamics.ActiveReports.TextBox();
             this.txtKubunName = new DataDynamics.ActiveReports.TextBox();
             this.groupFooter1 = new DataDynamics.ActiveReports.GroupFooter();
-            this.labelYoushiki = new DataDynamics.ActiveReports.Label();
+            this.ラベル5 = new DataDynamics.ActiveReports.Label();
             ((System.ComponentModel.ISupportInitialize)(this.前年_ラベル)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.本年_ラベル)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.大区分_ラベル)).BeginInit();
@@ -106,6 +107,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtKaikeiKubun)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoujinMei)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKisanbi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.labelYoushiki)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTsumitateTorikuzushiCol1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.テキスト51)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKihonkinCol1)).BeginInit();
@@ -136,7 +138,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTsumitateCol0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKubunId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKubunName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.labelYoushiki)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ラベル5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // pageHeader
@@ -145,8 +147,9 @@
             this.前年_ラベル,
             this.本年_ラベル,
             this.大区分_ラベル,
-            this.差異_ラベル});
-            this.pageHeader.Height = 0.15625F;
+            this.差異_ラベル,
+            this.ラベル5});
+            this.pageHeader.Height = 0.3F;
             this.pageHeader.Name = "pageHeader";
             // 
             // 前年_ラベル
@@ -163,7 +166,7 @@
     "et: 128";
             this.前年_ラベル.Tag = "DetachedLabel";
             this.前年_ラベル.Text = "前年度決算";
-            this.前年_ラベル.Top = 0F;
+            this.前年_ラベル.Top = 0.15F;
             this.前年_ラベル.Width = 1.40625F;
             // 
             // 本年_ラベル
@@ -180,7 +183,7 @@
     "et: 128";
             this.本年_ラベル.Tag = "DetachedLabel";
             this.本年_ラベル.Text = "本年度決算";
-            this.本年_ラベル.Top = 0F;
+            this.本年_ラベル.Top = 0.15F;
             this.本年_ラベル.Width = 1.40625F;
             // 
             // 大区分_ラベル
@@ -197,7 +200,7 @@
     "et: 128";
             this.大区分_ラベル.Tag = "DetachedLabel";
             this.大区分_ラベル.Text = "大区分";
-            this.大区分_ラベル.Top = 0F;
+            this.大区分_ラベル.Top = 0.15F;
             this.大区分_ラベル.Width = 2.677083F;
             // 
             // 差異_ラベル
@@ -214,7 +217,7 @@
     "et: 128";
             this.差異_ラベル.Tag = "DetachedLabel";
             this.差異_ラベル.Text = "増減";
-            this.差異_ラベル.Top = 0F;
+            this.差異_ラベル.Top = 0.15F;
             this.差異_ラベル.Width = 1.40625F;
             // 
             // detail
@@ -386,20 +389,20 @@
             this.txtHoujinMei,
             this.txtKisanbi,
             this.labelYoushiki});
-            this.reportHeader1.Height = 0.4479167F;
+            this.reportHeader1.Height = 0.41F;
             this.reportHeader1.Name = "reportHeader1";
             // 
             // ラベル101
             // 
             this.ラベル101.Height = 0.15625F;
             this.ラベル101.HyperLink = "";
-            this.ラベル101.Left = 2.78125F;
+            this.ラベル101.Left = 2.781F;
             this.ラベル101.Name = "ラベル101";
             this.ラベル101.Style = "color: Black; font-family: ＭＳ Ｐゴシック; font-size: 9pt; text-align: left; ddo-char-s" +
     "et: 128";
             this.ラベル101.Tag = "";
             this.ラベル101.Text = "（自）";
-            this.ラベル101.Top = 0.2916667F;
+            this.ラベル101.Top = 0.261F;
             this.ラベル101.Width = 0.3020833F;
             // 
             // labelTitle
@@ -419,13 +422,13 @@
             // 
             this.ラベル103.Height = 0.15625F;
             this.ラベル103.HyperLink = "";
-            this.ラベル103.Left = 4.347917F;
+            this.ラベル103.Left = 4.347667F;
             this.ラベル103.Name = "ラベル103";
             this.ラベル103.Style = "color: Black; font-family: ＭＳ Ｐゴシック; font-size: 9pt; text-align: left; ddo-char-s" +
     "et: 128";
             this.ラベル103.Tag = "";
             this.ラベル103.Text = "（至）";
-            this.ラベル103.Top = 0.2916667F;
+            this.ラベル103.Top = 0.261F;
             this.ラベル103.Width = 0.3020833F;
             // 
             // ラベル88
@@ -449,14 +452,14 @@
             // 
             this.txtKimatsubi.CanGrow = false;
             this.txtKimatsubi.Height = 0.15625F;
-            this.txtKimatsubi.Left = 4.65F;
+            this.txtKimatsubi.Left = 4.64975F;
             this.txtKimatsubi.Name = "txtKimatsubi";
             this.txtKimatsubi.OutputFormat = resources.GetString("txtKimatsubi.OutputFormat");
             this.txtKimatsubi.Style = "background-color: White; color: Black; font-family: ＭＳ Ｐゴシック; font-size: 9pt; tex" +
     "t-align: center; ddo-char-set: 128";
             this.txtKimatsubi.Tag = "";
             this.txtKimatsubi.Text = null;
-            this.txtKimatsubi.Top = 0.2916667F;
+            this.txtKimatsubi.Top = 0.261F;
             this.txtKimatsubi.Width = 1.264583F;
             // 
             // ラベル64
@@ -516,15 +519,26 @@
             // 
             this.txtKisanbi.CanGrow = false;
             this.txtKisanbi.Height = 0.15625F;
-            this.txtKisanbi.Left = 3.083333F;
+            this.txtKisanbi.Left = 3.083083F;
             this.txtKisanbi.Name = "txtKisanbi";
             this.txtKisanbi.OutputFormat = resources.GetString("txtKisanbi.OutputFormat");
             this.txtKisanbi.Style = "background-color: White; color: Black; font-family: ＭＳ Ｐゴシック; font-size: 9pt; tex" +
     "t-align: center; ddo-char-set: 128";
             this.txtKisanbi.Tag = "";
             this.txtKisanbi.Text = null;
-            this.txtKisanbi.Top = 0.2916667F;
+            this.txtKisanbi.Top = 0.261F;
             this.txtKisanbi.Width = 1.264583F;
+            // 
+            // labelYoushiki
+            // 
+            this.labelYoushiki.Height = 0.229F;
+            this.labelYoushiki.HyperLink = null;
+            this.labelYoushiki.Left = 5.548F;
+            this.labelYoushiki.Name = "labelYoushiki";
+            this.labelYoushiki.Style = "";
+            this.labelYoushiki.Text = "";
+            this.labelYoushiki.Top = 0F;
+            this.labelYoushiki.Width = 1.149F;
             // 
             // reportFooter1
             // 
@@ -1131,16 +1145,18 @@
             this.groupFooter1.Height = 0F;
             this.groupFooter1.Name = "groupFooter1";
             // 
-            // labelYoushiki
+            // ラベル5
             // 
-            this.labelYoushiki.Height = 0.229F;
-            this.labelYoushiki.HyperLink = null;
-            this.labelYoushiki.Left = 5.548F;
-            this.labelYoushiki.Name = "labelYoushiki";
-            this.labelYoushiki.Style = "";
-            this.labelYoushiki.Text = "";
-            this.labelYoushiki.Top = 0F;
-            this.labelYoushiki.Width = 1.149F;
+            this.ラベル5.Height = 0.15625F;
+            this.ラベル5.HyperLink = "";
+            this.ラベル5.Left = 6.25F;
+            this.ラベル5.Name = "ラベル5";
+            this.ラベル5.Style = "color: Black; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; text-align: left; ddo-cha" +
+    "r-set: 0";
+            this.ラベル5.Tag = "";
+            this.ラベル5.Text = "（単位：円）";
+            this.ラベル5.Top = 0.00999999F;
+            this.ラベル5.Width = 0.6145833F;
             // 
             // JigyouKatsudouSyuushiKeisansyo
             // 
@@ -1180,6 +1196,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtKaikeiKubun)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoujinMei)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKisanbi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.labelYoushiki)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTsumitateTorikuzushiCol1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.テキスト51)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKihonkinCol1)).EndInit();
@@ -1210,7 +1227,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTsumitateCol0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKubunId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKubunName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.labelYoushiki)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ラベル5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -1274,6 +1291,6 @@
         private DataDynamics.ActiveReports.TextBox txtIsSummaryRow;
         private DataDynamics.ActiveReports.TextBox txtKamokuKubunHierarchy;
         private DataDynamics.ActiveReports.Label labelYoushiki;
-
+        private DataDynamics.ActiveReports.Label ラベル5;
     }
 }

@@ -1,6 +1,6 @@
-C:\Users\programing\Source\Repos\KIKaikeiSystem\KaikeiSystem\bin\Release\DatabaseUpdater.exe.config
-C:\Users\programing\Source\Repos\KIKaikeiSystem\KaikeiSystem\bin\Release\DatabaseUpdater.exe
-C:\Users\programing\Source\Repos\KIKaikeiSystem\DatabaseUpdater\obj\x86\Release\DatabaseUpdater.Properties.Resources.resources
-C:\Users\programing\Source\Repos\KIKaikeiSystem\DatabaseUpdater\obj\x86\Release\DatabaseUpdater.csproj.GenerateResource.cache
-C:\Users\programing\Source\Repos\KIKaikeiSystem\DatabaseUpdater\obj\x86\Release\DatabaseUpdater.csproj.CopyComplete
-C:\Users\programing\Source\Repos\KIKaikeiSystem\DatabaseUpdater\obj\x86\Release\DatabaseUpdater.exe
+C:\Users\programing\source\repos\KIKaikeiSystem\KaikeiSystem\bin\Release\DatabaseUpdater.exe.config
+C:\Users\programing\source\repos\KIKaikeiSystem\KaikeiSystem\bin\Release\DatabaseUpdater.exe
+C:\Users\programing\source\repos\KIKaikeiSystem\DatabaseUpdater\obj\x86\Release\DatabaseUpdater.Properties.Resources.resources
+C:\Users\programing\source\repos\KIKaikeiSystem\DatabaseUpdater\obj\x86\Release\DatabaseUpdater.csproj.GenerateResource.cache
+C:\Users\programing\source\repos\KIKaikeiSystem\DatabaseUpdater\obj\x86\Release\DatabaseUpdater.csproj.CopyComplete
+C:\Users\programing\source\repos\KIKaikeiSystem\DatabaseUpdater\obj\x86\Release\DatabaseUpdater.exe

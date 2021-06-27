@@ -638,7 +638,7 @@
             this.labelCurrentGengou.Name = "labelCurrentGengou";
             this.labelCurrentGengou.Size = new System.Drawing.Size(66, 34);
             this.labelCurrentGengou.TabIndex = 6;
-            this.labelCurrentGengou.Text = "H";
+            this.labelCurrentGengou.Text = "R";
             this.labelCurrentGengou.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelCurrentYear

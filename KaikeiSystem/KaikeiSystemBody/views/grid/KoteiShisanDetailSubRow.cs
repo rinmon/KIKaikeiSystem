@@ -35,8 +35,8 @@ namespace KaikeiSystemBody.views.grid
                 return text;
             };
 
-            dateSyutokubi.GengouStr = "H";
-            dateGensyoubi.GengouStr = "H";
+            dateSyutokubi.GengouStr = "R";
+            dateGensyoubi.GengouStr = "R";
         }
 
         // Rowデータの設定

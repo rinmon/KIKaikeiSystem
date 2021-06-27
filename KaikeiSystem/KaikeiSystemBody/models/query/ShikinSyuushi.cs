@@ -225,8 +225,11 @@ namespace KaikeiSystemBody.models.query
                         hasChild = true;
                     }
                 }
-
-                if (OmitZeroRow == false || hasChild || shikinSyuushiRow.Yosan != 0 || shikinSyuushiRow.Taisyaku != 0) {
+                if (OmitZeroRow == false || hasChild || shikinSyuushiRow.Yosan != 0 || shikinSyuushiRow.Taisyaku != 0) 
+                {
+                    list.Add(shikinSyuushiRow);
+                } else if (OmitZeroRow == true)
+                {
                     list.Add(shikinSyuushiRow);
                 }
 
@@ -253,6 +256,14 @@ namespace KaikeiSystemBody.models.query
         private void CalcSummary() {
             InitSummaryRows();
 
+            ShikinSyuushiRow initShikinSyuushiRow = new ShikinSyuushiRow(0, -1);
+            SummaryRows[(int)SummaryItem.JigyouSyuunyuu].Add(initShikinSyuushiRow);
+            SummaryRows[(int)SummaryItem.JigyouShisyutsu].Add(initShikinSyuushiRow);
+            SummaryRows[(int)SummaryItem.ShisetsuSyuunyuu].Add(initShikinSyuushiRow);
+            SummaryRows[(int)SummaryItem.ShisetsuShisyutsu].Add(initShikinSyuushiRow);
+            SummaryRows[(int)SummaryItem.SonotaSyuunyuu].Add(initShikinSyuushiRow);
+            SummaryRows[(int)SummaryItem.SonotaShisyutsu].Add(initShikinSyuushiRow);
+
             foreach (var daikubunShikinSyuushiRow in DaikubunRows) {
                 models.db.Row daikubunRow = db.MTKamokuKubun.GetRowById(daikubunShikinSyuushiRow.Id);
                 int shikinSyuushiId = (int)daikubunRow.GetLong("parent_id", 0);
@@ -277,7 +288,7 @@ namespace KaikeiSystemBody.models.query
                         break;
                 }
             }
-            SummaryRows[(int)SummaryItem.JigyouSyuushi].DainyuuAMinusB(SummaryRows[(int)SummaryItem.JigyouSyuunyuu], SummaryRows[(int)SummaryItem.JigyouShisyutsu]);
+           SummaryRows[(int)SummaryItem.JigyouSyuushi].DainyuuAMinusB(SummaryRows[(int)SummaryItem.JigyouSyuunyuu], SummaryRows[(int)SummaryItem.JigyouShisyutsu]);
             SummaryRows[(int)SummaryItem.ShisetsuSyuushi].DainyuuAMinusB(SummaryRows[(int)SummaryItem.ShisetsuSyuunyuu], SummaryRows[(int)SummaryItem.ShisetsuShisyutsu]);
             SummaryRows[(int)SummaryItem.SonotaSyuushi].DainyuuAMinusB(SummaryRows[(int)SummaryItem.SonotaSyuunyuu], SummaryRows[(int)SummaryItem.SonotaShisyutsu]);
 
@@ -375,8 +386,11 @@ namespace KaikeiSystemBody.models.query
                     }
                 }
                 if (row != dummyRow) {
-                    result.Add(row);
-                    AddChildRowsTo(result, row.Id, row.PrintGroupKubunId, (int)models.constants.MTKamokuKubunHierarchy.ChuuKubun);
+                    if (OmitZeroRow == false || row.Yosan != 0 || row.Taisyaku != 0)
+                    {
+                            result.Add(row);
+                            AddChildRowsTo(result, row.Id, row.PrintGroupKubunId, (int)models.constants.MTKamokuKubunHierarchy.ChuuKubun);
+                    }
                 }
 
                 beforeKubunId = row.PrintGroupKubunId;
@@ -401,9 +415,12 @@ namespace KaikeiSystemBody.models.query
                 return;
             }
             foreach (var row in ChildRowsOf[parentKubunId]) {
-                row.PrintGroupKubunId = printGroupKubunId;
-                rows.Add(row);
-                AddChildRowsTo(rows, row.Id, printGroupKubunId, kamokuKubunHierarchy + 1);
+                if (OmitZeroRow == false || row.Yosan != 0 || row.Taisyaku != 0)
+                {
+                    row.PrintGroupKubunId = printGroupKubunId;
+                    rows.Add(row);
+                    AddChildRowsTo(rows, row.Id, printGroupKubunId, kamokuKubunHierarchy + 1);
+                }
             }
         }
     }

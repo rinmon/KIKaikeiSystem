@@ -44,6 +44,7 @@ namespace KaikeiSystemBody.models.query
 
             public JigyouSyuushiRow(int id_, int kamokuKubunHierarchy_) {
                 Id = id_;
+                Id = id_;
                 CurrentYearSum = 0;
                 LastYearSum = 0;
                 IsSummaryRow = false;
@@ -200,8 +201,11 @@ namespace KaikeiSystemBody.models.query
                     }
                 }
 
-                if (OmitZeroRow == false || hasChild || jigyouSyuushiRow.CurrentYearSum != 0 || jigyouSyuushiRow.LastYearSum != 0) {
-                    list.Add(jigyouSyuushiRow);
+                if (OmitZeroRow == false || hasChild || jigyouSyuushiRow.CurrentYearSum != 0 || jigyouSyuushiRow.LastYearSum != 0)
+                    {               
+                        list.Add(jigyouSyuushiRow);
+                    } else if(OmitZeroRow == true ) {
+                        list.Add(jigyouSyuushiRow);
                 }
 
                 if (kamokuKubunHierarchy == (int)models.constants.MTKamokuKubunHierarchy.ChuuKubun) {
@@ -244,6 +248,15 @@ namespace KaikeiSystemBody.models.query
 
         private void CalcSummary() {
             InitSummaryRows();
+           
+            JigyouSyuushiRow jigyouSyuushiRow = new JigyouSyuushiRow(0, -1);
+            SummaryRows[(int)SummaryItem.ServiceKatsudouSyuunyuu].Add(jigyouSyuushiRow);
+            SummaryRows[(int)SummaryItem.ServiceKatsudouShisyutsu].Add(jigyouSyuushiRow);
+            SummaryRows[(int)SummaryItem.ServiceKatsudouGaiSyuunyuu].Add(jigyouSyuushiRow);
+            SummaryRows[(int)SummaryItem.ServiceKatsudouGaiShisyutsu].Add(jigyouSyuushiRow);
+            SummaryRows[(int)SummaryItem.TokubetsuSyuunyuu].Add(jigyouSyuushiRow);
+            SummaryRows[(int)SummaryItem.TokubetsuShisyutsu].Add(jigyouSyuushiRow);
+
 
             foreach (var daikubunJigyouSyuusjiRow in DaikubunRows) {
                 models.db.Row daikubunRow = db.MTKamokuKubun.GetRowById(daikubunJigyouSyuusjiRow.Id);
@@ -363,7 +376,8 @@ namespace KaikeiSystemBody.models.query
                             AddDummyRow(footerRows, beforeKubunId);
                             break;
                     }
-                    foreach (var footer in footerRows) {
+                    foreach (var footer in footerRows)
+                    {
                         footer.PrintGroupKubunId = beforeKubunId;
                         footer.IsSummaryRow = true;
                         result.Add(footer);
@@ -373,11 +387,14 @@ namespace KaikeiSystemBody.models.query
                         break;
                     }
                 }
-                if (row != dummyRow) {
-                    result.Add(row);
-                    AddChildRowsTo(result, row.Id, row.PrintGroupKubunId, (int)models.constants.MTKamokuKubunHierarchy.ChuuKubun);
+                if (row != dummyRow)
+                {
+                    if (OmitZeroRow == false || row.CurrentYearSum != 0 || row.LastYearSum != 0)
+                    {
+                        result.Add(row);
+                        AddChildRowsTo(result, row.Id, row.PrintGroupKubunId, (int)models.constants.MTKamokuKubunHierarchy.ChuuKubun);
+                    }
                 }
-
                 beforeKubunId = row.PrintGroupKubunId;
             }
 
@@ -400,9 +417,12 @@ namespace KaikeiSystemBody.models.query
                 return;
             }
             foreach (var row in ChildRowsOf[parentKubunId]) {
-                row.PrintGroupKubunId = printGroupKubunId;
-                rows.Add(row);
-                AddChildRowsTo(rows, row.Id, printGroupKubunId, kamokuKubunHierarchy + 1);
+                if (OmitZeroRow == false || row.CurrentYearSum != 0 || row.LastYearSum != 0)
+                {
+                    row.PrintGroupKubunId = printGroupKubunId;
+                    rows.Add(row);
+                    AddChildRowsTo(rows, row.Id, printGroupKubunId, kamokuKubunHierarchy + 1);
+                }
             }
         }
     }
